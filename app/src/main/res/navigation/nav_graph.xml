@@ -24,6 +24,10 @@
         android:name="com.ipf.technicalrulesquiz.ui.quiz.QuizFragment"
         android:label="Quiz"
         tools:layout="@layout/fragment_quiz">
+        <argument
+            android:name="questionCount"
+            app:argType="integer"
+            android:defaultValue="10" />
         <action
             android:id="@+id/action_quiz_to_result"
             app:destination="@id/resultFragment"

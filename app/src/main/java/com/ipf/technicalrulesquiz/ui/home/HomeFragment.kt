@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.ipf.technicalrulesquiz.BuildConfig
@@ -30,11 +31,18 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnStartQuiz.setOnClickListener {
-            findNavController().navigate(R.id.action_home_to_quiz)
-        }
+        binding.btnQuiz10.setOnClickListener { startQuiz(10) }
+        binding.btnQuiz25.setOnClickListener { startQuiz(25) }
+        binding.btnQuiz50.setOnClickListener { startQuiz(50) }
 
         setupRemoveAdsButton()
+    }
+
+    private fun startQuiz(questionCount: Int) {
+        findNavController().navigate(
+            R.id.action_home_to_quiz,
+            bundleOf("questionCount" to questionCount)
+        )
     }
 
     private fun setupRemoveAdsButton() {

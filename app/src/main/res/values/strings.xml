@@ -7,6 +7,10 @@
     <string name="quiz_info_title">About This Quiz</string>
     <string name="quiz_info_description">This quiz contains multiple-choice questions based on the IPF Technical Rules Book (March 2026). Each question includes a reference to the specific rule section for learning purposes.</string>
     <string name="start_quiz">Start Quiz</string>
+    <string name="quiz_10_questions">10 Questions</string>
+    <string name="quiz_25_questions">25 Questions</string>
+    <string name="quiz_50_questions">50 Questions</string>
+    <string name="choose_quiz_length">Choose Quiz Length</string>
     <string name="rules_version">Based on IPF Technical Rules (March 2026)</string>
 
     <!-- Quiz Screen -->
@@ -35,7 +39,7 @@
     <string name="question_number_format">Q%1$d</string>
 
     <!-- Remove Ads -->
-    <string name="remove_ads">Remove Ads — €2.00</string>
+    <string name="remove_ads">Go ad-free</string>
     <string name="ads_removed">Ads Removed</string>
 
     <!-- General -->

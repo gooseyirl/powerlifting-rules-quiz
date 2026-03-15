@@ -42,7 +42,8 @@ class QuizFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.startQuiz(10)
+        val questionCount = arguments?.getInt("questionCount", 10) ?: 10
+        viewModel.startQuiz(questionCount)
         setupObservers()
         setupListeners()
 
