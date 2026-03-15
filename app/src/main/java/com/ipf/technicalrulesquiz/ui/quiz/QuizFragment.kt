@@ -8,6 +8,7 @@ import android.widget.RadioButton
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.google.android.gms.ads.AdRequest
 import com.ipf.technicalrulesquiz.R
 import com.ipf.technicalrulesquiz.databinding.FragmentQuizBinding
 
@@ -42,6 +43,7 @@ class QuizFragment : Fragment() {
         viewModel.startQuiz(10)
         setupObservers()
         setupListeners()
+        binding.adView.loadAd(AdRequest.Builder().build())
     }
 
     private fun setupObservers() {
