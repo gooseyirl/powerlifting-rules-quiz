@@ -73,7 +73,11 @@ class ResultFragment : Fragment() {
             findNavController().navigate(R.id.action_result_to_home)
         }
 
-        binding.adView.loadAd(AdRequest.Builder().build())
+        if (BuildConfig.SHOW_ADS) {
+            binding.adView.loadAd(AdRequest.Builder().build())
+        } else {
+            binding.adView.visibility = View.GONE
+        }
     }
 
     override fun onDestroyView() {

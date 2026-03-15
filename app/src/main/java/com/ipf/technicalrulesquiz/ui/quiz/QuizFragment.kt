@@ -43,7 +43,11 @@ class QuizFragment : Fragment() {
         viewModel.startQuiz(10)
         setupObservers()
         setupListeners()
-        binding.adView.loadAd(AdRequest.Builder().build())
+        if (BuildConfig.SHOW_ADS) {
+            binding.adView.loadAd(AdRequest.Builder().build())
+        } else {
+            binding.adView.visibility = View.GONE
+        }
     }
 
     private fun setupObservers() {

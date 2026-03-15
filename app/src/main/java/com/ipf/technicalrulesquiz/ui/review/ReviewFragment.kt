@@ -38,7 +38,11 @@ class ReviewFragment : Fragment() {
             findNavController().navigateUp()
         }
 
-        binding.adView.loadAd(AdRequest.Builder().build())
+        if (BuildConfig.SHOW_ADS) {
+            binding.adView.loadAd(AdRequest.Builder().build())
+        } else {
+            binding.adView.visibility = View.GONE
+        }
     }
 
     override fun onDestroyView() {

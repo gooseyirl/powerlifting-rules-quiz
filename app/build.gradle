@@ -29,6 +29,9 @@ android {
         // Inject AdMob IDs at build time
         manifestPlaceholders = [admobAppId: admobAppId]
         resValue "string", "admob_banner_ad_unit_id", admobBannerUnitId
+
+        // Set to true when AdMob account is approved and real IDs are in local.properties
+        buildConfigField "boolean", "SHOW_ADS", "false"
     }
 
     buildTypes {
