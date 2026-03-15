@@ -45,9 +45,8 @@ class QuizFragment : Fragment() {
         viewModel.startQuiz(10)
         setupObservers()
         setupListeners()
-        if (BuildConfig.SHOW_ADS && !BillingManager.isAdsRemoved(requireContext())) {
-            binding.adView.loadAd(AdRequest.Builder().build())
-        } else {
+
+        if (!BuildConfig.SHOW_ADS || BillingManager.isAdsRemoved(requireContext())) {
             binding.adView.visibility = View.GONE
         }
     }
@@ -96,6 +95,13 @@ class QuizFragment : Fragment() {
 
         binding.btnNext.setOnClickListener {
             viewModel.submitAnswer()
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (BuildConfig.SHOW_ADS && !BillingManager.isAdsRemoved(requireContext())) {
+            binding.adView.loadAd(AdRequest.Builder().build())
         }
     }
 
