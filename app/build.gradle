@@ -3,6 +3,16 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+// Load AdMob IDs from local.properties (not committed to git)
+// Falls back to test IDs if local.properties is not present
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader -> localProperties.load(reader) }
+}
+def admobAppId = localProperties.getProperty('admob.app.id', 'ca-app-pub-3940256099942544~3347511713')
+def admobBannerUnitId = localProperties.getProperty('admob.banner.unit.id', 'ca-app-pub-3940256099942544/6300978111')
+
 android {
     namespace 'com.ipf.technicalrulesquiz'
     compileSdk 35
@@ -15,6 +25,10 @@ android {
         versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // Inject AdMob IDs at build time
+        manifestPlaceholders = [admobAppId: admobAppId]
+        resValue "string", "admob_banner_ad_unit_id", admobBannerUnitId
     }
 
     buildTypes {

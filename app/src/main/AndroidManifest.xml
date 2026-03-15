@@ -4,7 +4,6 @@
 
     <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
 
-    <!-- TODO: Replace with real AdMob App ID from admob.google.com -->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -16,10 +15,9 @@
         android:theme="@style/Theme.IPFTechnicalRulesQuiz"
         tools:targetApi="31">
 
-        <!-- TODO: Replace with real AdMob App ID from admob.google.com -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="${admobAppId}"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
