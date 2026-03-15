@@ -10,6 +10,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.gms.ads.AdRequest
 import com.ipf.technicalrulesquiz.R
+import com.ipf.technicalrulesquiz.billing.BillingManager
 import com.ipf.technicalrulesquiz.databinding.FragmentQuizBinding
 
 class QuizFragment : Fragment() {
@@ -43,7 +44,7 @@ class QuizFragment : Fragment() {
         viewModel.startQuiz(10)
         setupObservers()
         setupListeners()
-        if (BuildConfig.SHOW_ADS) {
+        if (BuildConfig.SHOW_ADS && !BillingManager.isAdsRemoved(requireContext())) {
             binding.adView.loadAd(AdRequest.Builder().build())
         } else {
             binding.adView.visibility = View.GONE

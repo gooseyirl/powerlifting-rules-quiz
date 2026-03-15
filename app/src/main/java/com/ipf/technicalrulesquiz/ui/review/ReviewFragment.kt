@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.gms.ads.AdRequest
+import com.ipf.technicalrulesquiz.billing.BillingManager
 import com.ipf.technicalrulesquiz.databinding.FragmentReviewBinding
 import com.ipf.technicalrulesquiz.ui.quiz.QuizViewModel
 
@@ -38,7 +39,7 @@ class ReviewFragment : Fragment() {
             findNavController().navigateUp()
         }
 
-        if (BuildConfig.SHOW_ADS) {
+        if (BuildConfig.SHOW_ADS && !BillingManager.isAdsRemoved(requireContext())) {
             binding.adView.loadAd(AdRequest.Builder().build())
         } else {
             binding.adView.visibility = View.GONE

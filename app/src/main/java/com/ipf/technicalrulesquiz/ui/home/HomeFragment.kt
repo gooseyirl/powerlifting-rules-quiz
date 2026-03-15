@@ -6,13 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.ipf.technicalrulesquiz.BuildConfig
 import com.ipf.technicalrulesquiz.R
+import com.ipf.technicalrulesquiz.billing.BillingManager
 import com.ipf.technicalrulesquiz.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
+    private var billingManager: BillingManager? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,10 +33,41 @@ class HomeFragment : Fragment() {
         binding.btnStartQuiz.setOnClickListener {
             findNavController().navigate(R.id.action_home_to_quiz)
         }
+
+        setupRemoveAdsButton()
+    }
+
+    private fun setupRemoveAdsButton() {
+        // Only show the Remove Ads button when ads are enabled
+        if (!BuildConfig.SHOW_ADS) {
+            binding.btnRemoveAds.visibility = View.GONE
+            return
+        }
+
+        if (BillingManager.isAdsRemoved(requireContext())) {
+            showAdsRemovedState()
+            return
+        }
+
+        billingManager = BillingManager(requireActivity()) {
+            showAdsRemovedState()
+        }
+        billingManager?.connect()
+
+        binding.btnRemoveAds.setOnClickListener {
+            billingManager?.launchPurchaseFlow()
+        }
+    }
+
+    private fun showAdsRemovedState() {
+        binding.btnRemoveAds.text = getString(R.string.ads_removed)
+        binding.btnRemoveAds.isEnabled = false
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
+        billingManager?.disconnect()
+        billingManager = null
         _binding = null
     }
 }
