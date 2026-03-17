@@ -1,5 +1,7 @@
 # IPF Technical Rules Quiz
 
+> **Disclaimer:** This is an unofficial, independent app. It is not affiliated with, endorsed by, or associated with the International Powerlifting Federation (IPF).
+
 An Android application for testing knowledge of the International Powerlifting Federation (IPF) Technical Rules Book.
 
 ## Overview
@@ -207,4 +209,4 @@ For questions, issues, or suggestions, please open an issue in the repository.
 
 ---
 
-**Note**: This app is not officially affiliated with the International Powerlifting Federation (IPF). It is an independent educational tool created to help individuals learn the IPF technical rules.
+This application is for educational purposes only. The IPF Technical Rules Book is the property of the International Powerlifting Federation.

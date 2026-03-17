@@ -21,9 +21,11 @@ Character count: 77/80
 ## Long Description (4000 characters max)
 
 ```
+DISCLAIMER: This is an unofficial, independent app. It is not affiliated with, endorsed by, or associated with the International Powerlifting Federation (IPF).
+
 Master the IPF Technical Rules Book with this comprehensive quiz application!
 
-IPF Technical Rules Quiz is the perfect study companion for powerlifters, coaches, referees, and anyone involved in International Powerlifting Federation competitions. This app helps you learn and test your knowledge of the official technical rules governing IPF powerlifting meets.
+IPF Technical Rules Quiz is the perfect study companion for powerlifters, coaches, referees, and anyone interested in International Powerlifting Federation competition rules. This app helps you learn and test your knowledge of the technical rules governing IPF powerlifting meets.
 
 KEY FEATURES
 
@@ -103,7 +105,6 @@ Focus on learning without distractions. This app is built for education, not dat
 
 Download now and become an expert in IPF technical rules!
 
-Note: This app is an independent educational tool and is not officially affiliated with the International Powerlifting Federation (IPF).
 ```
 
 Character count: ~2,900/4000

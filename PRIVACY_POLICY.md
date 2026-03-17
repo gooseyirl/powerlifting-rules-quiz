@@ -2,6 +2,10 @@
 
 **Last Updated: March 17, 2026**
 
+## Disclaimer
+
+This is an unofficial, independent app. It is not affiliated with, endorsed by, or associated with the International Powerlifting Federation (IPF). All rule content is based on publicly available IPF Technical Rules documentation.
+
 ## Introduction
 
 This Privacy Policy describes how IPF Technical Rules Quiz ("the App", "we", "our") handles information when you use our mobile application.
