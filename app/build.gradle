@@ -21,8 +21,8 @@ android {
         applicationId "com.ipf.technicalrulesquiz"
         minSdk 24
         targetSdk 35
-        versionCode 6
-        versionName "1.5.0"
+        versionCode 7
+        versionName "1.6.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -58,9 +58,9 @@ android {
 
 dependencies {
     // AndroidX Core
-    implementation 'androidx.core:core-ktx:1.15.0'
-    implementation 'androidx.appcompat:appcompat:1.7.0'
-    implementation 'androidx.activity:activity-ktx:1.9.3'
+    implementation 'androidx.core:core-ktx:1.16.0'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'androidx.activity:activity-ktx:1.10.1'
 
     // Material Design
     implementation 'com.google.android.material:material:1.13.0'
@@ -89,7 +89,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.11.0'
 
     // Google AdMob
-    implementation 'com.google.android.gms:play-services-ads:24.1.0'
+    implementation 'com.google.android.gms:play-services-ads:24.3.0'
 
     // Google Play Billing
     implementation 'com.android.billingclient:billing-ktx:7.1.1'
