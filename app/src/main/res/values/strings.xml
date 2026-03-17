@@ -49,6 +49,13 @@
     <string name="error_loading_pdf">Could not load the rulebook. Please check your internet connection and try again.</string>
     <string name="page_indicator">Page %1$d of %2$d</string>
 
+    <!-- Suggest Question -->
+    <string name="suggest_question">Suggest a question</string>
+    <string name="suggest_question_dialog_title">Suggest a question?</string>
+    <string name="suggest_question_dialog_message">This will open your email app with a template for submitting a question suggestion to the developer.</string>
+    <string name="suggest_email_subject">[IPF Quiz] Question Suggestion</string>
+    <string name="suggest_email_body">Question:\n\n\nOption A:\nOption B:\nOption C:\nOption D:\n\nCorrect Answer:\n\nRule Reference (section/page):\n</string>
+
     <!-- Report Question -->
     <string name="report_question">Report question</string>
     <string name="report_question_dialog_title">Report this question?</string>

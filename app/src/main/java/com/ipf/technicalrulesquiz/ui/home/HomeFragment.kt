@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.ipf.technicalrulesquiz.BuildConfig
 import com.ipf.technicalrulesquiz.R
 import com.ipf.technicalrulesquiz.billing.BillingManager
@@ -40,6 +41,25 @@ class HomeFragment : Fragment() {
         binding.versionInfo.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.rules_book_url)))
             startActivity(intent)
+        }
+
+        binding.suggestQuestion.setOnClickListener {
+            MaterialAlertDialogBuilder(requireContext())
+                .setTitle(R.string.suggest_question_dialog_title)
+                .setMessage(R.string.suggest_question_dialog_message)
+                .setNegativeButton(android.R.string.cancel, null)
+                .setPositiveButton(R.string.report_question_open_email) { _, _ ->
+                    val intent = Intent(Intent.ACTION_SENDTO).apply {
+                        data = Uri.parse("mailto:")
+                        putExtra(Intent.EXTRA_EMAIL, arrayOf(getString(R.string.developer_email)))
+                        putExtra(Intent.EXTRA_SUBJECT, getString(R.string.suggest_email_subject))
+                        putExtra(Intent.EXTRA_TEXT, getString(R.string.suggest_email_body))
+                    }
+                    if (intent.resolveActivity(requireActivity().packageManager) != null) {
+                        startActivity(intent)
+                    }
+                }
+                .show()
         }
 
         setupRemoveAdsButton()
