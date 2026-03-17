@@ -81,7 +81,8 @@ class AnswerReviewAdapter(
                 binding.ruleReference.setTextColor(
                     com.google.android.material.color.MaterialColors.getColor(
                         binding.root,
-                        com.google.android.material.R.attr.colorPrimary
+                        android.R.attr.colorPrimary,
+                        binding.root.context.getColor(android.R.color.black)
                     )
                 )
                 binding.ruleReference.setOnClickListener { onPageClick(pageNumber) }
