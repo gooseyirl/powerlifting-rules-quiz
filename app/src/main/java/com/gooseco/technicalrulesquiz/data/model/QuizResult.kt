@@ -1,4 +1,4 @@
-package com.ipf.technicalrulesquiz.data.model
+package com.gooseco.technicalrulesquiz.data.model
 
 data class QuizResult(
     val totalQuestions: Int,

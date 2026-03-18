@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.ipf.technicalrulesquiz.ui.home.HomeFragment"
+        android:name="com.gooseco.technicalrulesquiz.ui.home.HomeFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_home">
         <action
@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/quizFragment"
-        android:name="com.ipf.technicalrulesquiz.ui.quiz.QuizFragment"
+        android:name="com.gooseco.technicalrulesquiz.ui.quiz.QuizFragment"
         android:label="Quiz"
         tools:layout="@layout/fragment_quiz">
         <argument
@@ -38,7 +38,7 @@
 
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.ipf.technicalrulesquiz.ui.result.ResultFragment"
+        android:name="com.gooseco.technicalrulesquiz.ui.result.ResultFragment"
         android:label="Results"
         tools:layout="@layout/fragment_result">
         <action
@@ -62,7 +62,7 @@
 
     <fragment
         android:id="@+id/reviewFragment"
-        android:name="com.ipf.technicalrulesquiz.ui.review.ReviewFragment"
+        android:name="com.gooseco.technicalrulesquiz.ui.review.ReviewFragment"
         android:label="@string/review_answers"
         tools:layout="@layout/fragment_review">
         <action
@@ -76,7 +76,7 @@
 
     <fragment
         android:id="@+id/pdfViewerFragment"
-        android:name="com.ipf.technicalrulesquiz.ui.pdf.PdfViewerFragment"
+        android:name="com.gooseco.technicalrulesquiz.ui.pdf.PdfViewerFragment"
         android:label="@string/ipf_rulebook"
         tools:layout="@layout/fragment_pdf_viewer">
         <argument

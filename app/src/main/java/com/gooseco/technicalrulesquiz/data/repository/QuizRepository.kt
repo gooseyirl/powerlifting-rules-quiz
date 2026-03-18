@@ -1,9 +1,9 @@
-package com.ipf.technicalrulesquiz.data.repository
+package com.gooseco.technicalrulesquiz.data.repository
 
 import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
-import com.ipf.technicalrulesquiz.data.model.QuizQuestion
+import com.gooseco.technicalrulesquiz.data.model.QuizQuestion
 import java.io.IOException
 
 class QuizRepository(private val context: Context) {

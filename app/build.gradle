@@ -14,11 +14,11 @@ def admobAppId = localProperties.getProperty('admob.app.id', 'ca-app-pub-3940256
 def admobBannerUnitId = localProperties.getProperty('admob.banner.unit.id', 'ca-app-pub-3940256099942544/6300978111')
 
 android {
-    namespace 'com.ipf.technicalrulesquiz'
+    namespace 'com.gooseco.technicalrulesquiz'
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.ipf.technicalrulesquiz"
+        applicationId "com.gooseco.technicalrulesquiz"
         minSdk 24
         targetSdk 35
         versionCode 7

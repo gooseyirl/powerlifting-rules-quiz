@@ -1,4 +1,4 @@
-package com.ipf.technicalrulesquiz.ui.home
+package com.gooseco.technicalrulesquiz.ui.home
 
 import android.content.Intent
 import android.net.Uri
@@ -7,13 +7,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.ipf.technicalrulesquiz.BuildConfig
-import com.ipf.technicalrulesquiz.R
-import com.ipf.technicalrulesquiz.billing.BillingManager
-import com.ipf.technicalrulesquiz.databinding.FragmentHomeBinding
+import com.gooseco.technicalrulesquiz.BuildConfig
+import com.gooseco.technicalrulesquiz.R
+import com.gooseco.technicalrulesquiz.billing.BillingManager
+import com.gooseco.technicalrulesquiz.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
@@ -33,6 +36,14 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val basePaddingTop = binding.root.paddingTop
+        val basePaddingBottom = binding.root.paddingBottom
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
+            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.updatePadding(top = basePaddingTop + bars.top, bottom = basePaddingBottom + bars.bottom)
+            WindowInsetsCompat.CONSUMED
+        }
 
         binding.btnQuiz10.setOnClickListener { startQuiz(10) }
         binding.btnQuiz25.setOnClickListener { startQuiz(25) }

@@ -1,4 +1,4 @@
-package com.ipf.technicalrulesquiz.data.model
+package com.gooseco.technicalrulesquiz.data.model
 
 import com.google.gson.annotations.SerializedName
 

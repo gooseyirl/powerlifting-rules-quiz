@@ -1,13 +1,13 @@
-package com.ipf.technicalrulesquiz.ui.quiz
+package com.gooseco.technicalrulesquiz.ui.quiz
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.ipf.technicalrulesquiz.data.model.AnsweredQuestion
-import com.ipf.technicalrulesquiz.data.model.QuizQuestion
-import com.ipf.technicalrulesquiz.data.model.QuizResult
-import com.ipf.technicalrulesquiz.data.repository.QuizRepository
+import com.gooseco.technicalrulesquiz.data.model.AnsweredQuestion
+import com.gooseco.technicalrulesquiz.data.model.QuizQuestion
+import com.gooseco.technicalrulesquiz.data.model.QuizResult
+import com.gooseco.technicalrulesquiz.data.repository.QuizRepository
 
 class QuizViewModel(application: Application) : AndroidViewModel(application) {
 

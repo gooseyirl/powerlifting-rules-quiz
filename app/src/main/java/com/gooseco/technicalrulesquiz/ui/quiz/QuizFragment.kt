@@ -1,4 +1,4 @@
-package com.ipf.technicalrulesquiz.ui.quiz
+package com.gooseco.technicalrulesquiz.ui.quiz
 
 import android.content.Intent
 import android.net.Uri
@@ -7,17 +7,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.ipf.technicalrulesquiz.BuildConfig
-import com.ipf.technicalrulesquiz.R
-import com.ipf.technicalrulesquiz.billing.BillingManager
-import com.ipf.technicalrulesquiz.data.model.QuizQuestion
-import com.ipf.technicalrulesquiz.databinding.FragmentQuizBinding
+import com.gooseco.technicalrulesquiz.BuildConfig
+import com.gooseco.technicalrulesquiz.R
+import com.gooseco.technicalrulesquiz.billing.BillingManager
+import com.gooseco.technicalrulesquiz.data.model.QuizQuestion
+import com.gooseco.technicalrulesquiz.databinding.FragmentQuizBinding
 
 class QuizFragment : Fragment() {
 
@@ -47,6 +50,12 @@ class QuizFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
+            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.updatePadding(top = bars.top, bottom = bars.bottom)
+            WindowInsetsCompat.CONSUMED
+        }
 
         val questionCount = arguments?.getInt("questionCount", 10) ?: 10
         viewModel.startQuiz(questionCount)

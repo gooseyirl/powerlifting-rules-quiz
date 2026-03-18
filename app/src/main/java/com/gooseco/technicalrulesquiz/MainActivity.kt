@@ -1,4 +1,4 @@
-package com.ipf.technicalrulesquiz
+package com.gooseco.technicalrulesquiz
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.gms.ads.MobileAds
-import com.ipf.technicalrulesquiz.databinding.ActivityMainBinding
+import com.gooseco.technicalrulesquiz.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

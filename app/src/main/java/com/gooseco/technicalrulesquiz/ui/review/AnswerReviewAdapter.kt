@@ -1,4 +1,4 @@
-package com.ipf.technicalrulesquiz.ui.review
+package com.gooseco.technicalrulesquiz.ui.review
 
 import android.content.Intent
 import android.net.Uri
@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.ipf.technicalrulesquiz.R
-import com.ipf.technicalrulesquiz.data.model.AnsweredQuestion
-import com.ipf.technicalrulesquiz.databinding.ItemAnswerReviewBinding
+import com.gooseco.technicalrulesquiz.R
+import com.gooseco.technicalrulesquiz.data.model.AnsweredQuestion
+import com.gooseco.technicalrulesquiz.databinding.ItemAnswerReviewBinding
 
 class AnswerReviewAdapter(
     private val answeredQuestions: List<AnsweredQuestion>,

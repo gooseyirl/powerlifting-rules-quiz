@@ -1,20 +1,24 @@
-package com.ipf.technicalrulesquiz.ui.review
+package com.gooseco.technicalrulesquiz.ui.review
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
+import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import androidx.core.os.bundleOf
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
-import com.ipf.technicalrulesquiz.BuildConfig
-import com.ipf.technicalrulesquiz.R
-import com.ipf.technicalrulesquiz.billing.BillingManager
-import com.ipf.technicalrulesquiz.databinding.FragmentReviewBinding
-import com.ipf.technicalrulesquiz.ui.quiz.QuizViewModel
+import com.gooseco.technicalrulesquiz.BuildConfig
+import com.gooseco.technicalrulesquiz.R
+import com.gooseco.technicalrulesquiz.billing.BillingManager
+import com.gooseco.technicalrulesquiz.databinding.FragmentReviewBinding
+import com.gooseco.technicalrulesquiz.ui.quiz.QuizViewModel
 
 class ReviewFragment : Fragment() {
 
@@ -34,6 +38,15 @@ class ReviewFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, insets ->
+            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            binding.toolbar.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                topMargin = bars.top
+            }
+            binding.root.updatePadding(bottom = bars.bottom)
+            WindowInsetsCompat.CONSUMED
+        }
 
         val result = viewModel.getQuizResult()
         val adapter = AnswerReviewAdapter(result.answeredQuestions) { pageNumber ->

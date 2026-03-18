@@ -1,4 +1,4 @@
-package com.ipf.technicalrulesquiz.ui.pdf
+package com.gooseco.technicalrulesquiz.ui.pdf
 
 import android.graphics.Bitmap
 import android.graphics.Color

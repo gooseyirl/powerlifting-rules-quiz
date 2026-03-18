@@ -1,4 +1,4 @@
-package com.ipf.technicalrulesquiz.billing
+package com.gooseco.technicalrulesquiz.billing
 
 import android.app.Activity
 import android.content.Context

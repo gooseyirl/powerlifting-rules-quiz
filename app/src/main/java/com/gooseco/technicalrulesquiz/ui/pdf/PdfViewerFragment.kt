@@ -1,4 +1,4 @@
-package com.ipf.technicalrulesquiz.ui.pdf
+package com.gooseco.technicalrulesquiz.ui.pdf
 
 import android.graphics.pdf.PdfRenderer
 import android.os.Bundle
@@ -6,13 +6,17 @@ import android.os.ParcelFileDescriptor
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
+import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.ipf.technicalrulesquiz.R
-import com.ipf.technicalrulesquiz.databinding.FragmentPdfViewerBinding
+import com.gooseco.technicalrulesquiz.R
+import com.gooseco.technicalrulesquiz.databinding.FragmentPdfViewerBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
@@ -40,6 +44,15 @@ class PdfViewerFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, insets ->
+            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            binding.toolbar.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                topMargin = bars.top
+            }
+            binding.root.updatePadding(bottom = bars.bottom)
+            WindowInsetsCompat.CONSUMED
+        }
 
         val pageNumber = arguments?.getInt("pageNumber", 1) ?: 1
 
