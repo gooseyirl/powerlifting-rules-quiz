@@ -11,7 +11,21 @@
         android:label="@string/app_name"
         tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_home_to_quiz"
+            android:id="@+id/action_home_to_quiz_setup"
+            app:destination="@id/quizSetupFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quizSetupFragment"
+        android:name="com.gooseco.technicalrulesquiz.ui.home.QuizSetupFragment"
+        android:label="@string/choose_quiz_length"
+        tools:layout="@layout/fragment_quiz_setup">
+        <action
+            android:id="@+id/action_quiz_setup_to_quiz"
             app:destination="@id/quizFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"

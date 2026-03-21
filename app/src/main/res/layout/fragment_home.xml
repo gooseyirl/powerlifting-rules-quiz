@@ -72,58 +72,15 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-        <TextView
-            android:id="@+id/choose_length_label"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_start_quiz"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="@string/choose_quiz_length"
-            android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
-
-        <LinearLayout
-            android:id="@+id/quiz_length_buttons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_quiz_10"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="4dp"
-                android:minWidth="0dp"
-                android:text="@string/quiz_10_questions"
-                android:textSize="13sp"
-                style="@style/Widget.Material3.Button" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_quiz_25"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
-                android:minWidth="0dp"
-                android:text="@string/quiz_25_questions"
-                android:textSize="13sp"
-                style="@style/Widget.Material3.Button.TonalButton" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_quiz_50"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="4dp"
-                android:minWidth="0dp"
-                android:text="@string/quiz_50_questions"
-                android:textSize="13sp"
-                style="@style/Widget.Material3.Button.OutlinedButton" />
-
-        </LinearLayout>
+            android:padding="16dp"
+            android:text="@string/start_quiz"
+            android:textSize="16sp"
+            style="@style/Widget.Material3.Button" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_remove_ads"
