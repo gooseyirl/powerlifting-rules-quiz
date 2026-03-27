@@ -44,7 +44,7 @@
     },
     {
       "id": 3,
-      "question": "What is the distance between the 81cm marks on the bar used for bench press grip measurement?",
+      "question": "What is the distance between the marks on the bar used for bench press grip measurement?",
       "options": [
         "32cm",
         "46cm",
@@ -59,7 +59,7 @@
         "pageNumber": 8
       },
       "explanation": "There shall be a diameter machined marking to measure 81cm between markings.",
-      "status": "review_later",
+      "status": "validated",
       "ruleQuote": null
     },
     {
@@ -166,12 +166,12 @@
       "id": 9,
       "question": "What is the minimum height range for squat rack adjustment?",
       "options": [
+        "0.50m to 1.50m",
         "1.00m to 1.70m",
-        "1.3m",
-        "1.5m",
-        "1.6m"
+        "1.3m to 2.00m",
+        "1.5m to 2.50m"
       ],
-      "correctAnswerIndex": 0,
+      "correctAnswerIndex": 1,
       "ruleReference": {
         "section": "Equipment and Specifications",
         "subsection": "Squat Racks",
@@ -179,7 +179,7 @@
         "pageNumber": 9
       },
       "explanation": "The squat racks shall be designed to adjust from a minimum height of 1.00m in the lowest position to extend to a height of at least 1.70m in 2.5cm increments.",
-      "status": "review_later",
+      "status": "validated",
       "ruleQuote": null
     },
     {
@@ -279,7 +279,7 @@
         "pageNumber": 20
       },
       "explanation": "The lifter must bend the knees and lower the body until the top surface of the legs at the hip joint is lower than the top of the knees.",
-      "status": "review_later",
+      "status": "validated",
       "ruleQuote": null
     },
     {
@@ -315,8 +315,8 @@
       "ruleReference": {
         "section": "Powerlifts and Rules of Performance",
         "subsection": "Squat",
-        "ruleNumber": "5",
-        "pageNumber": 20
+        "ruleNumber": "4.1",
+        "pageNumber": 21
       },
       "explanation": "The signal to rack the bar will consist of a backward motion of the arm and the audible command 'Rack'.",
       "status": "validated",
@@ -386,10 +386,10 @@
       "id": 20,
       "question": "What is the maximum grip width allowed on bench press?",
       "options": [
-        "63forefingers",
+        "63cm between forefingers",
         "81cm between forefingers",
-        "97forefingers",
-        "115forefingers"
+        "97cm between forefingers",
+        "115cm between forefingers"
       ],
       "correctAnswerIndex": 1,
       "ruleReference": {
@@ -399,7 +399,7 @@
         "pageNumber": 21
       },
       "explanation": "The spacing of the hands shall not exceed 81cm measured between the forefingers.",
-      "status": "review_later",
+      "status": "validated",
       "ruleQuote": null
     },
     {
@@ -526,9 +526,9 @@
       "id": 27,
       "question": "What is the minimum foot block dimension required at international competitions?",
       "options": [
-        "26cm",
-        "34cm",
-        "40cm",
+        "26cm x 26cm",
+        "34cm x 54cm",
+        "40cm x 40cm",
         "60cm x 40cm"
       ],
       "correctAnswerIndex": 3,
@@ -556,7 +556,7 @@
         "section": "Powerlifts and Rules of Performance",
         "subsection": "Deadlift",
         "ruleNumber": "3",
-        "pageNumber": 26
+        "pageNumber": 25
       },
       "explanation": "The Chief Referee's signal shall consist of a downward movement of the arm and the audible command 'Down'.",
       "status": "validated",
@@ -576,7 +576,7 @@
         "section": "Referees",
         "subsection": "Signals",
         "ruleNumber": "3",
-        "pageNumber": 34
+        "pageNumber": 35
       },
       "explanation": "For deadlift commencement, no signal is required.",
       "status": "validated",
@@ -629,7 +629,7 @@
         "No, until final position is reached",
         "Only after lockout",
         "Yes, once",
-        "Yes, for repositioning"
+        "Only after the bar passes the knees"
       ],
       "correctAnswerIndex": 0,
       "ruleReference": {
@@ -639,7 +639,7 @@
         "pageNumber": 26
       },
       "explanation": "Once the attempt has begun no downward movement is allowed until the lifter reaches the erect position with the knees locked. If the bar settles as the shoulders come back, this should not be reason to disqualify the lift.",
-      "status": "review_later",
+      "status": "validated",
       "ruleQuote": null
     },
     {
@@ -706,12 +706,12 @@
       "id": 36,
       "question": "What is the maximum wrist wrap length?",
       "options": [
-        "1m",
-        "1m",
-        "1m",
-        "1m"
+        "0.25m",
+        "0.5m",
+        "0.75m",
+        "1.0m"
       ],
-      "correctAnswerIndex": 0,
+      "correctAnswerIndex": 3,
       "ruleReference": {
         "section": "Personal Equipment",
         "subsection": "Wraps - Wrists",
@@ -719,7 +719,7 @@
         "pageNumber": 18
       },
       "explanation": "Wrist wraps shall not exceed 1m in length and 8cm in width.",
-      "status": "review_later",
+      "status": "validated",
       "ruleQuote": null
     },
     {
@@ -768,8 +768,8 @@
       "options": [
         "1m",
         "2m",
-        "2m",
-        "3m"
+        "3m",
+        "4m"
       ],
       "correctAnswerIndex": 1,
       "ruleReference": {
@@ -779,7 +779,7 @@
         "pageNumber": 18
       },
       "explanation": "Wraps not exceeding 2m in length and 8cm in width may be worn only in competitions which are designated as Equipped.",
-      "status": "review_later",
+      "status": "validated",
       "ruleQuote": "Wraps - Knees\n\n1. Wraps not exceeding 2 m in length and 8 cm in width may be worn only in competitions which are designated as Equipped. A knee wrap shall not extend beyond 15 cm above and 15 cm below the center of the knee joint and shall not exceed a total covering width of 30 cm. IPF approved knee sleeves are allowed. A combination of the two is strictly forbidden. Neoprene may be “synthetic rubber, but is only acceptable in the knee sleeve."
     },
     {
