@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("appTheme") private var theme = AppTheme.system
     @State private var path = NavigationPath()
     @State private var repository = QuizRepository()
     @State private var quizViewModel = QuizViewModel()
@@ -25,6 +26,7 @@ struct ContentView: View {
         .environment(repository)
         .environment(quizViewModel)
         .environment(storeManager)
+        .preferredColorScheme(theme.colorScheme)
         .onAppear { repository.loadIfNeeded() }
         .task { await storeManager.loadState() }
     }

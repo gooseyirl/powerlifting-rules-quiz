@@ -6,9 +6,9 @@ private let developerEmail = "gooseyirl+plrulesquiz@gmail.com"
 struct HomeView: View {
     @Binding var path: NavigationPath
     @Environment(QuizRepository.self) private var repository
-    @Environment(StoreManager.self) private var storeManager
     @Environment(\.openURL) private var openURL
 
+    @State private var showSettings = false
     @State private var showSuggestDialog = false
 
     var body: some View {
@@ -75,8 +75,6 @@ struct HomeView: View {
                             .frame(maxWidth: .infinity)
                     }
                     .buttonStyle(.bordered)
-
-                    adFreeButton
                 }
             }
             .padding()
@@ -84,13 +82,17 @@ struct HomeView: View {
         .navigationTitle("Home")
         .navigationBarTitleDisplayMode(.inline)
         .background(Color(.systemGroupedBackground))
-        .alert("Purchase Failed", isPresented: Binding(
-            get: { storeManager.purchaseError != nil },
-            set: { if !$0 { /* error clears itself on next purchase attempt */ } }
-        )) {
-            Button("OK", role: .cancel) {}
-        } message: {
-            Text(storeManager.purchaseError ?? "")
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    showSettings = true
+                } label: {
+                    Image(systemName: "gear")
+                }
+            }
+        }
+        .sheet(isPresented: $showSettings) {
+            SettingsView()
         }
         .confirmationDialog(
             "Suggest a question?",
@@ -101,40 +103,6 @@ struct HomeView: View {
             Button("Cancel", role: .cancel) {}
         } message: {
             Text("This will open your email app with a template for submitting a question suggestion to the developer.")
-        }
-    }
-
-    @ViewBuilder
-    private var adFreeButton: some View {
-        if storeManager.isAdFree {
-            Label("Ads Removed", systemImage: "checkmark.shield.fill")
-                .foregroundStyle(.green)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 4)
-        } else {
-            Button {
-                Task { await storeManager.purchase() }
-            } label: {
-                HStack {
-                    Label("Go ad-free", systemImage: "xmark.shield")
-                    Spacer()
-                    if storeManager.isLoading {
-                        ProgressView().tint(.orange)
-                    } else if let price = storeManager.displayPrice {
-                        Text(price)
-                            .fontWeight(.semibold)
-                    }
-                }
-                .frame(maxWidth: .infinity)
-            }
-            .buttonStyle(.bordered)
-            .tint(.orange)
-            .disabled(storeManager.isLoading)
-            .contextMenu {
-                Button("Restore Purchase") {
-                    Task { await storeManager.restore() }
-                }
-            }
         }
     }
 
