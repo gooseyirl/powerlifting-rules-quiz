@@ -2,9 +2,12 @@ import SwiftUI
 
 private let developerEmail = "gooseyirl+plrulesquiz@gmail.com"
 
+private let quizBannerAdUnitID = "ca-app-pub-3826192057448984/8060929824"
+
 struct QuizView: View {
     @Binding var path: NavigationPath
     @Environment(QuizViewModel.self) private var quizViewModel
+    @Environment(StoreManager.self) private var storeManager
     @Environment(\.openURL) private var openURL
 
     @State private var showReportDialog = false
@@ -21,6 +24,13 @@ struct QuizView: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
         .background(Color(.systemGroupedBackground))
+        .safeAreaInset(edge: .bottom) {
+            if !storeManager.isAdFree {
+                BannerAdView(adUnitID: quizBannerAdUnitID)
+                    .frame(height: 50)
+                    .background(Color(.systemBackground))
+            }
+        }
         .onChange(of: quizViewModel.quizCompleted) { _, completed in
             if completed {
                 path.append(AppRoute.result)

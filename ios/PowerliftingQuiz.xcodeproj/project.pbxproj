@@ -10,6 +10,7 @@
 		0220927A21010D185C73812C /* QuizResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A20C7EF32E33AC76048EAE /* QuizResult.swift */; };
 		0321C25B138BB37F3E6B082F /* PowerliftingQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA116BEF4977B0F719309A /* PowerliftingQuizApp.swift */; };
 		036076F0F98275CE4803E089 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D50F47FE0A766C841D2AF /* HomeView.swift */; };
+		07F503D3A5B36BBF2E2F19D6 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 580B30787D7F00582D473E30 /* GoogleMobileAds */; };
 		08E618571A97999377926075 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BA3D767A29CCB98C28C94 /* QuizView.swift */; };
 		16072B6481482F5D28D334DC /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225CE663873EC7E6AD1F8C85 /* QuizQuestion.swift */; };
 		2DE5C0B0E8245227ED12B692 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E33E62030C53D3DE0DDE4D /* QuizViewModel.swift */; };
@@ -17,7 +18,9 @@
 		53F60FC42E6B238BD7DD64D0 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784FB5DCF497A2EC510E8AE5 /* ReviewView.swift */; };
 		55F2CBD6926CBB176E14DACD /* QuizSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659BC04E46E234CBAEE9F658 /* QuizSetupView.swift */; };
 		56BFDEEE42A745CE58F214DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD17929665E219FA5CC534AF /* Assets.xcassets */; };
+		570700F49921423E0D941BEA /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328AC3894B5FDE3448639AC7 /* BannerAdView.swift */; };
 		655840F388C754341700340E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EAB1DFA62037018862FC9 /* ContentView.swift */; };
+		6AD8B453C81A95A2D777611C /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C326E2026536616089124D7E /* StoreManager.swift */; };
 		7970F438AACB3BD135EFED16 /* PowerliftingQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5299AC7EA926769A87115 /* PowerliftingQuizTests.swift */; };
 		7ABD6E006EFF0548909BE36F /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FDA6703276CDA9F8D55891 /* ResultView.swift */; };
 		9B326A9A1F87A054D4C53986 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41D7E2575087014AC80D8CE /* AppRoute.swift */; };
@@ -38,6 +41,7 @@
 		13ED9BAEE59E572D4C178A5E /* PowerliftingQuizTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PowerliftingQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15E33E62030C53D3DE0DDE4D /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		225CE663873EC7E6AD1F8C85 /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
+		328AC3894B5FDE3448639AC7 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		659BC04E46E234CBAEE9F658 /* QuizSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSetupView.swift; sourceTree = "<group>"; };
 		71A20C7EF32E33AC76048EAE /* QuizResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResult.swift; sourceTree = "<group>"; };
 		784FB5DCF497A2EC510E8AE5 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 		B41D7E2575087014AC80D8CE /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		B5EA116BEF4977B0F719309A /* PowerliftingQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerliftingQuizApp.swift; sourceTree = "<group>"; };
 		BD0EAB1DFA62037018862FC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C326E2026536616089124D7E /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		C6A8B5C80EC2EC9C5A46453C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C8FDA6703276CDA9F8D55891 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		CBC5299AC7EA926769A87115 /* PowerliftingQuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerliftingQuizTests.swift; sourceTree = "<group>"; };
@@ -54,6 +59,17 @@
 		E03D50F47FE0A766C841D2AF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E09BA3D767A29CCB98C28C94 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5ED334B7552C5D6AFC49D6E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F503D3A5B36BBF2E2F19D6 /* GoogleMobileAds in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		1BB30447DDA7A794F086479C /* App */ = {
@@ -78,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				9E8CA3CD2640E2FF8A4C5114 /* QuizRepository.swift */,
+				C326E2026536616089124D7E /* StoreManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -94,6 +111,7 @@
 		49EFBC103C3A28492380FE93 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				328AC3894B5FDE3448639AC7 /* BannerAdView.swift */,
 				E03D50F47FE0A766C841D2AF /* HomeView.swift */,
 				659BC04E46E234CBAEE9F658 /* QuizSetupView.swift */,
 				E09BA3D767A29CCB98C28C94 /* QuizView.swift */,
@@ -171,6 +189,7 @@
 			buildPhases = (
 				13850BE75817E9F358D833EF /* Sources */,
 				F72E6BDD23366EF68A107081 /* Resources */,
+				5ED334B7552C5D6AFC49D6E6 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,6 +197,7 @@
 			);
 			name = PowerliftingQuiz;
 			packageProductDependencies = (
+				580B30787D7F00582D473E30 /* GoogleMobileAds */,
 			);
 			productName = PowerliftingQuiz;
 			productReference = A94E91B685DAA557AC49B5C6 /* PowerliftingQuiz.app */;
@@ -227,6 +247,9 @@
 			);
 			mainGroup = CDF2AD99349FDC9450F6F2F4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BE346C172FCAA8DA0E4E4E1F /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3BE502415949AC885059E5B5 /* Products */;
 			projectDirPath = "";
@@ -256,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B326A9A1F87A054D4C53986 /* AppRoute.swift in Sources */,
+				570700F49921423E0D941BEA /* BannerAdView.swift in Sources */,
 				655840F388C754341700340E /* ContentView.swift in Sources */,
 				036076F0F98275CE4803E089 /* HomeView.swift in Sources */,
 				0321C25B138BB37F3E6B082F /* PowerliftingQuizApp.swift in Sources */,
@@ -267,6 +291,7 @@
 				2DE5C0B0E8245227ED12B692 /* QuizViewModel.swift in Sources */,
 				7ABD6E006EFF0548909BE36F /* ResultView.swift in Sources */,
 				53F60FC42E6B238BD7DD64D0 /* ReviewView.swift in Sources */,
+				6AD8B453C81A95A2D777611C /* StoreManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +547,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BE346C172FCAA8DA0E4E4E1F /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		580B30787D7F00582D473E30 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE346C172FCAA8DA0E4E4E1F /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E2EFB7DE260883B300809DF4 /* Project object */;
 }

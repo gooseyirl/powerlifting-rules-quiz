@@ -5,6 +5,11 @@ options:
     iOS: "17.0"
   xcodeVersion: "16.0"
 
+packages:
+  GoogleMobileAds:
+    url: https://github.com/googleads/swift-package-manager-google-mobile-ads
+    from: "12.0.0"
+
 settings:
   base:
     SWIFT_VERSION: "6.0"
@@ -38,6 +43,9 @@ targets:
       - path: ../shared/questions.json
         buildPhase: resources
         group: Shared
+    dependencies:
+      - package: GoogleMobileAds
+        product: GoogleMobileAds
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.gooseco.technicalrulesquiz
@@ -61,6 +69,7 @@ targets:
         CFBundleShortVersionString: "$(MARKETING_VERSION)"
         CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
         CFBundleIconName: AppIcon
+        GADApplicationIdentifier: "ca-app-pub-3826192057448984~6959601142"
         UILaunchScreen:
           UIColorName: ""
         UISupportedInterfaceOrientations:

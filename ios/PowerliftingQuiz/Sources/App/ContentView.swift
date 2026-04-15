@@ -4,6 +4,7 @@ struct ContentView: View {
     @State private var path = NavigationPath()
     @State private var repository = QuizRepository()
     @State private var quizViewModel = QuizViewModel()
+    @State private var storeManager = StoreManager()
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -23,6 +24,8 @@ struct ContentView: View {
         }
         .environment(repository)
         .environment(quizViewModel)
+        .environment(storeManager)
         .onAppear { repository.loadIfNeeded() }
+        .task { await storeManager.loadState() }
     }
 }

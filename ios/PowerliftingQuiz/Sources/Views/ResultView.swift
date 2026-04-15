@@ -1,9 +1,12 @@
 import SwiftUI
 
+private let resultBannerAdUnitID = "ca-app-pub-3826192057448984/8060929824"
+
 struct ResultView: View {
     @Binding var path: NavigationPath
     @Environment(QuizViewModel.self) private var quizViewModel
     @Environment(QuizRepository.self) private var repository
+    @Environment(StoreManager.self) private var storeManager
 
     // Capture result once so it doesn't change if quiz is restarted
     @State private var result: QuizResult?
@@ -102,6 +105,13 @@ struct ResultView: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
         .background(Color(.systemGroupedBackground))
+        .safeAreaInset(edge: .bottom) {
+            if !storeManager.isAdFree {
+                BannerAdView(adUnitID: resultBannerAdUnitID)
+                    .frame(height: 50)
+                    .background(Color(.systemBackground))
+            }
+        }
         .onAppear {
             if result == nil {
                 result = quizViewModel.getQuizResult()
