@@ -241,6 +241,7 @@
 				TargetAttributes = {
 					0E9279D21D232B27D1272D36 = {
 						DevelopmentTeam = RG72PZGLF9;
+						ProvisioningStyle = Automatic;
 					};
 					D1145011F63046DD8320913D = {
 						DevelopmentTeam = RG72PZGLF9;
@@ -459,8 +460,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PowerliftingQuiz/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +469,6 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gooseco.technicalrulesquiz;
-				PROVISIONING_PROFILE_SPECIFIER = "PowerliftingQuiz AppStore Distribution";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -513,7 +513,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PowerliftingQuiz/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
