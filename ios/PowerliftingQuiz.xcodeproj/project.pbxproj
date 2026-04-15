@@ -468,7 +468,6 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gooseco.technicalrulesquiz;
-				PROVISIONING_PROFILE_SPECIFIER = "PowerliftingQuiz AppStore";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
