@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0321C25B138BB37F3E6B082F /* PowerliftingQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA116BEF4977B0F719309A /* PowerliftingQuizApp.swift */; };
+		404DF2C68E56EDE85A301CDA /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 81FDC37353E0C927815A59E6 /* questions.json */; };
+		56BFDEEE42A745CE58F214DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD17929665E219FA5CC534AF /* Assets.xcassets */; };
+		655840F388C754341700340E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EAB1DFA62037018862FC9 /* ContentView.swift */; };
+		7970F438AACB3BD135EFED16 /* PowerliftingQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5299AC7EA926769A87115 /* PowerliftingQuizTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F44842C08F05FF0C0725B3B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2EFB7DE260883B300809DF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E9279D21D232B27D1272D36;
+			remoteInfo = PowerliftingQuiz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13ED9BAEE59E572D4C178A5E /* PowerliftingQuizTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PowerliftingQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81FDC37353E0C927815A59E6 /* questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = questions.json; path = ../shared/questions.json; sourceTree = "<group>"; };
+		A94E91B685DAA557AC49B5C6 /* PowerliftingQuiz.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PowerliftingQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5EA116BEF4977B0F719309A /* PowerliftingQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerliftingQuizApp.swift; sourceTree = "<group>"; };
+		BD0EAB1DFA62037018862FC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C6A8B5C80EC2EC9C5A46453C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CBC5299AC7EA926769A87115 /* PowerliftingQuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerliftingQuizTests.swift; sourceTree = "<group>"; };
+		DD17929665E219FA5CC534AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1BB30447DDA7A794F086479C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BD0EAB1DFA62037018862FC9 /* ContentView.swift */,
+				B5EA116BEF4977B0F719309A /* PowerliftingQuizApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1C3A17D1E5DBFCCA9D70C1A4 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				81FDC37353E0C927815A59E6 /* questions.json */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		3BE502415949AC885059E5B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A94E91B685DAA557AC49B5C6 /* PowerliftingQuiz.app */,
+				13ED9BAEE59E572D4C178A5E /* PowerliftingQuizTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		594255D66022A1FD4EE0F4C3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1BB30447DDA7A794F086479C /* App */,
+			);
+			name = Sources;
+			path = PowerliftingQuiz/Sources;
+			sourceTree = "<group>";
+		};
+		C36517F96C90DE3036399CBB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DD17929665E219FA5CC534AF /* Assets.xcassets */,
+				C6A8B5C80EC2EC9C5A46453C /* Info.plist */,
+			);
+			name = Resources;
+			path = PowerliftingQuiz/Resources;
+			sourceTree = "<group>";
+		};
+		CDF2AD99349FDC9450F6F2F4 = {
+			isa = PBXGroup;
+			children = (
+				DED4D636F5EEEA6CD5CDC62C /* PowerliftingQuizTests */,
+				C36517F96C90DE3036399CBB /* Resources */,
+				1C3A17D1E5DBFCCA9D70C1A4 /* Shared */,
+				594255D66022A1FD4EE0F4C3 /* Sources */,
+				3BE502415949AC885059E5B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DED4D636F5EEEA6CD5CDC62C /* PowerliftingQuizTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBC5299AC7EA926769A87115 /* PowerliftingQuizTests.swift */,
+			);
+			path = PowerliftingQuizTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E9279D21D232B27D1272D36 /* PowerliftingQuiz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6DB77AA2BC772068C443714 /* Build configuration list for PBXNativeTarget "PowerliftingQuiz" */;
+			buildPhases = (
+				13850BE75817E9F358D833EF /* Sources */,
+				F72E6BDD23366EF68A107081 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PowerliftingQuiz;
+			packageProductDependencies = (
+			);
+			productName = PowerliftingQuiz;
+			productReference = A94E91B685DAA557AC49B5C6 /* PowerliftingQuiz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D1145011F63046DD8320913D /* PowerliftingQuizTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89A847F83E9E0BC144CAE27E /* Build configuration list for PBXNativeTarget "PowerliftingQuizTests" */;
+			buildPhases = (
+				39838AC78BBDE0734BBC5C30 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40756DBB0D1BC27BECD5D87C /* PBXTargetDependency */,
+			);
+			name = PowerliftingQuizTests;
+			packageProductDependencies = (
+			);
+			productName = PowerliftingQuizTests;
+			productReference = 13ED9BAEE59E572D4C178A5E /* PowerliftingQuizTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2EFB7DE260883B300809DF4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					0E9279D21D232B27D1272D36 = {
+						DevelopmentTeam = RG72PZGLF9;
+					};
+					D1145011F63046DD8320913D = {
+						DevelopmentTeam = RG72PZGLF9;
+					};
+				};
+			};
+			buildConfigurationList = B17D4C0D4FE807FC8BF7BAE9 /* Build configuration list for PBXProject "PowerliftingQuiz" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CDF2AD99349FDC9450F6F2F4;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 3BE502415949AC885059E5B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E9279D21D232B27D1272D36 /* PowerliftingQuiz */,
+				D1145011F63046DD8320913D /* PowerliftingQuizTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F72E6BDD23366EF68A107081 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56BFDEEE42A745CE58F214DB /* Assets.xcassets in Resources */,
+				404DF2C68E56EDE85A301CDA /* questions.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13850BE75817E9F358D833EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				655840F388C754341700340E /* ContentView.swift in Sources */,
+				0321C25B138BB37F3E6B082F /* PowerliftingQuizApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39838AC78BBDE0734BBC5C30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7970F438AACB3BD135EFED16 /* PowerliftingQuizTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		40756DBB0D1BC27BECD5D87C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E9279D21D232B27D1272D36 /* PowerliftingQuiz */;
+			targetProxy = F44842C08F05FF0C0725B3B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		40D2E77A81B8D6D018148EDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = RG72PZGLF9;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = PowerliftingQuiz/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gooseco.technicalrulesquiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		50EAF321324EA2740D66ACF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = RG72PZGLF9;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = PowerliftingQuiz/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gooseco.technicalrulesquiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		5F9CE7AE04D8360AB2AF9169 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
+				INFOPLIST_FILE = PowerliftingQuiz/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gooseco.technicalrulesquiz;
+				PROVISIONING_PROFILE_SPECIFIER = "PowerliftingQuiz AppStore Distribution";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		769953E1A3B8DAAA10537BBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PowerliftingQuiz.app/PowerliftingQuiz";
+			};
+			name = Release;
+		};
+		A56C2A94E9CE1BB73A9B6D5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PowerliftingQuiz.app/PowerliftingQuiz";
+			};
+			name = Debug;
+		};
+		B633830C7D8DD26369294840 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PowerliftingQuiz/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gooseco.technicalrulesquiz;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89A847F83E9E0BC144CAE27E /* Build configuration list for PBXNativeTarget "PowerliftingQuizTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A56C2A94E9CE1BB73A9B6D5B /* Debug */,
+				769953E1A3B8DAAA10537BBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B17D4C0D4FE807FC8BF7BAE9 /* Build configuration list for PBXProject "PowerliftingQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50EAF321324EA2740D66ACF0 /* Debug */,
+				40D2E77A81B8D6D018148EDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C6DB77AA2BC772068C443714 /* Build configuration list for PBXNativeTarget "PowerliftingQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B633830C7D8DD26369294840 /* Debug */,
+				5F9CE7AE04D8360AB2AF9169 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2EFB7DE260883B300809DF4 /* Project object */;
+}

@@ -54,6 +54,15 @@ android {
         viewBinding true
         buildConfig true
     }
+
+    sourceSets {
+        main {
+            assets {
+                // Include shared questions.json from repo root
+                srcDirs += ['../../shared']
+            }
+        }
+    }
 }
 
 dependencies {
