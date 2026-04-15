@@ -62,6 +62,8 @@ struct HomeView: View {
                         Text("Based on IPF Technical Rules (March 2026)")
                             .font(.footnote)
                             .underline()
+                            .lineLimit(nil)
+                            .multilineTextAlignment(.center)
                             .frame(maxWidth: .infinity)
                     }
 

@@ -1,7 +1,12 @@
 import SwiftUI
 
 private let developerEmail = "gooseyirl+plrulesquiz@gmail.com"
-private let rulesBookURL = URL(string: "https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf")!
+private let rulesBookBase = "https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf"
+
+private func rulesBookURL(page: Int? = nil) -> URL {
+    if let page, let url = URL(string: "\(rulesBookBase)#page=\(page)") { return url }
+    return URL(string: rulesBookBase)!
+}
 
 struct ReviewView: View {
     @Environment(QuizViewModel.self) private var quizViewModel
@@ -91,10 +96,12 @@ private struct AnswerReviewRow: View {
                 Text("Rule Reference:")
                     .font(.caption)
                     .foregroundStyle(.secondary)
-                Link(destination: rulesBookURL) {
+                Link(destination: rulesBookURL(page: question.ruleReference.pageNumber)) {
                     Text(question.ruleReference.fullReference)
                         .font(.caption)
                         .underline()
+                        .lineLimit(nil)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
             }
 
