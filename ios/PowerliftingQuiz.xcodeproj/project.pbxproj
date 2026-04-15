@@ -14,10 +14,12 @@
 		16072B6481482F5D28D334DC /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225CE663873EC7E6AD1F8C85 /* QuizQuestion.swift */; };
 		2DE5C0B0E8245227ED12B692 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E33E62030C53D3DE0DDE4D /* QuizViewModel.swift */; };
 		404DF2C68E56EDE85A301CDA /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 81FDC37353E0C927815A59E6 /* questions.json */; };
+		53F60FC42E6B238BD7DD64D0 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784FB5DCF497A2EC510E8AE5 /* ReviewView.swift */; };
 		55F2CBD6926CBB176E14DACD /* QuizSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659BC04E46E234CBAEE9F658 /* QuizSetupView.swift */; };
 		56BFDEEE42A745CE58F214DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD17929665E219FA5CC534AF /* Assets.xcassets */; };
 		655840F388C754341700340E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EAB1DFA62037018862FC9 /* ContentView.swift */; };
 		7970F438AACB3BD135EFED16 /* PowerliftingQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5299AC7EA926769A87115 /* PowerliftingQuizTests.swift */; };
+		7ABD6E006EFF0548909BE36F /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FDA6703276CDA9F8D55891 /* ResultView.swift */; };
 		9B326A9A1F87A054D4C53986 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41D7E2575087014AC80D8CE /* AppRoute.swift */; };
 		9C615338F1933468C9337DAF /* QuizRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8CA3CD2640E2FF8A4C5114 /* QuizRepository.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,7 @@
 		225CE663873EC7E6AD1F8C85 /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
 		659BC04E46E234CBAEE9F658 /* QuizSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSetupView.swift; sourceTree = "<group>"; };
 		71A20C7EF32E33AC76048EAE /* QuizResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResult.swift; sourceTree = "<group>"; };
+		784FB5DCF497A2EC510E8AE5 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		81FDC37353E0C927815A59E6 /* questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = questions.json; path = ../shared/questions.json; sourceTree = "<group>"; };
 		9E8CA3CD2640E2FF8A4C5114 /* QuizRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepository.swift; sourceTree = "<group>"; };
 		A94E91B685DAA557AC49B5C6 /* PowerliftingQuiz.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PowerliftingQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +48,7 @@
 		B5EA116BEF4977B0F719309A /* PowerliftingQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerliftingQuizApp.swift; sourceTree = "<group>"; };
 		BD0EAB1DFA62037018862FC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C6A8B5C80EC2EC9C5A46453C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C8FDA6703276CDA9F8D55891 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		CBC5299AC7EA926769A87115 /* PowerliftingQuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerliftingQuizTests.swift; sourceTree = "<group>"; };
 		DD17929665E219FA5CC534AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E03D50F47FE0A766C841D2AF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 				E03D50F47FE0A766C841D2AF /* HomeView.swift */,
 				659BC04E46E234CBAEE9F658 /* QuizSetupView.swift */,
 				E09BA3D767A29CCB98C28C94 /* QuizView.swift */,
+				C8FDA6703276CDA9F8D55891 /* ResultView.swift */,
+				784FB5DCF497A2EC510E8AE5 /* ReviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 				55F2CBD6926CBB176E14DACD /* QuizSetupView.swift in Sources */,
 				08E618571A97999377926075 /* QuizView.swift in Sources */,
 				2DE5C0B0E8245227ED12B692 /* QuizViewModel.swift in Sources */,
+				7ABD6E006EFF0548909BE36F /* ResultView.swift in Sources */,
+				53F60FC42E6B238BD7DD64D0 /* ReviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,13 +15,9 @@ struct ContentView: View {
                     case .quiz:
                         QuizView(path: $path)
                     case .result:
-                        // Implemented in Chunk 4
-                        Text("Results coming soon")
-                            .navigationTitle("Results")
+                        ResultView(path: $path)
                     case .review:
-                        // Implemented in Chunk 4
-                        Text("Review coming soon")
-                            .navigationTitle("Review Answers")
+                        ReviewView()
                     }
                 }
         }
