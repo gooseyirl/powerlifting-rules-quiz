@@ -1,20 +1,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var path = NavigationPath()
+    @State private var repository = QuizRepository()
+    @State private var quizViewModel = QuizViewModel()
+
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 24) {
-                Image(systemName: "trophy.fill")
-                    .font(.system(size: 64))
-                    .foregroundColor(.blue)
-                Text("Powerlifting Quiz")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                Text("Coming soon")
-                    .foregroundColor(.secondary)
-            }
-            .navigationTitle("Powerlifting Quiz")
-            .navigationBarTitleDisplayMode(.inline)
+        NavigationStack(path: $path) {
+            HomeView(path: $path)
+                .navigationDestination(for: AppRoute.self) { route in
+                    switch route {
+                    case .quizSetup:
+                        QuizSetupView(path: $path)
+                    case .quiz:
+                        QuizView(path: $path)
+                    case .result:
+                        // Implemented in Chunk 4
+                        Text("Results coming soon")
+                            .navigationTitle("Results")
+                    case .review:
+                        // Implemented in Chunk 4
+                        Text("Review coming soon")
+                            .navigationTitle("Review Answers")
+                    }
+                }
         }
+        .environment(repository)
+        .environment(quizViewModel)
+        .onAppear { repository.loadIfNeeded() }
     }
 }
