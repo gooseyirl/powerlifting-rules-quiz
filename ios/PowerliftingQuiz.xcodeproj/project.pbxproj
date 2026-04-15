@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0220927A21010D185C73812C /* QuizResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A20C7EF32E33AC76048EAE /* QuizResult.swift */; };
 		0321C25B138BB37F3E6B082F /* PowerliftingQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA116BEF4977B0F719309A /* PowerliftingQuizApp.swift */; };
+		16072B6481482F5D28D334DC /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225CE663873EC7E6AD1F8C85 /* QuizQuestion.swift */; };
 		404DF2C68E56EDE85A301CDA /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 81FDC37353E0C927815A59E6 /* questions.json */; };
 		56BFDEEE42A745CE58F214DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD17929665E219FA5CC534AF /* Assets.xcassets */; };
 		655840F388C754341700340E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EAB1DFA62037018862FC9 /* ContentView.swift */; };
 		7970F438AACB3BD135EFED16 /* PowerliftingQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5299AC7EA926769A87115 /* PowerliftingQuizTests.swift */; };
+		9C615338F1933468C9337DAF /* QuizRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8CA3CD2640E2FF8A4C5114 /* QuizRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,7 +29,10 @@
 
 /* Begin PBXFileReference section */
 		13ED9BAEE59E572D4C178A5E /* PowerliftingQuizTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PowerliftingQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		225CE663873EC7E6AD1F8C85 /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
+		71A20C7EF32E33AC76048EAE /* QuizResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResult.swift; sourceTree = "<group>"; };
 		81FDC37353E0C927815A59E6 /* questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = questions.json; path = ../shared/questions.json; sourceTree = "<group>"; };
+		9E8CA3CD2640E2FF8A4C5114 /* QuizRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepository.swift; sourceTree = "<group>"; };
 		A94E91B685DAA557AC49B5C6 /* PowerliftingQuiz.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PowerliftingQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EA116BEF4977B0F719309A /* PowerliftingQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerliftingQuizApp.swift; sourceTree = "<group>"; };
 		BD0EAB1DFA62037018862FC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +59,14 @@
 			name = Shared;
 			sourceTree = "<group>";
 		};
+		1E100A8B9CCB1016379083AB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9E8CA3CD2640E2FF8A4C5114 /* QuizRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		3BE502415949AC885059E5B5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				1BB30447DDA7A794F086479C /* App */,
+				1E100A8B9CCB1016379083AB /* Data */,
+				F3E9CC23079692179D9E24AE /* Models */,
 			);
 			name = Sources;
 			path = PowerliftingQuiz/Sources;
@@ -98,6 +114,15 @@
 				CBC5299AC7EA926769A87115 /* PowerliftingQuizTests.swift */,
 			);
 			path = PowerliftingQuizTests;
+			sourceTree = "<group>";
+		};
+		F3E9CC23079692179D9E24AE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				225CE663873EC7E6AD1F8C85 /* QuizQuestion.swift */,
+				71A20C7EF32E33AC76048EAE /* QuizResult.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +220,9 @@
 			files = (
 				655840F388C754341700340E /* ContentView.swift in Sources */,
 				0321C25B138BB37F3E6B082F /* PowerliftingQuizApp.swift in Sources */,
+				16072B6481482F5D28D334DC /* QuizQuestion.swift in Sources */,
+				9C615338F1933468C9337DAF /* QuizRepository.swift in Sources */,
+				0220927A21010D185C73812C /* QuizResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
