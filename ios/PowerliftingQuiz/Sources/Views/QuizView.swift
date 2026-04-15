@@ -80,9 +80,7 @@ struct QuizView: View {
                     quizViewModel.submitAnswer()
                 } label: {
                     Text("Next Question")
-                        .font(.headline)
                         .frame(maxWidth: .infinity)
-                        .padding()
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)

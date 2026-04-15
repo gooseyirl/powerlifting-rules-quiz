@@ -66,9 +66,7 @@ struct ResultView: View {
                             path.append(AppRoute.review)
                         } label: {
                             Label("Review Answers", systemImage: "list.bullet.clipboard")
-                                .font(.headline)
                                 .frame(maxWidth: .infinity)
-                                .padding()
                         }
                         .buttonStyle(.borderedProminent)
                         .controlSize(.large)
@@ -78,9 +76,7 @@ struct ResultView: View {
                             path.removeLast() // pop .result → back to QuizView
                         } label: {
                             Label("Retake Quiz", systemImage: "arrow.clockwise")
-                                .font(.headline)
                                 .frame(maxWidth: .infinity)
-                                .padding()
                         }
                         .buttonStyle(.bordered)
                         .controlSize(.large)
@@ -89,9 +85,7 @@ struct ResultView: View {
                             path = NavigationPath()
                         } label: {
                             Label("Back to Home", systemImage: "house")
-                                .font(.headline)
                                 .frame(maxWidth: .infinity)
-                                .padding()
                         }
                         .buttonStyle(.bordered)
                         .controlSize(.large)

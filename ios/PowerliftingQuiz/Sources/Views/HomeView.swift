@@ -48,6 +48,7 @@ struct HomeView: View {
                     path.append(AppRoute.quizSetup)
                 } label: {
                     Label("Start Quiz", systemImage: "play.fill")
+                        .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
