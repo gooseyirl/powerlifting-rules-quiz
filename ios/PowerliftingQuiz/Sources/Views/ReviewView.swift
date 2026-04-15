@@ -1,6 +1,7 @@
 import SwiftUI
 
 private let developerEmail = "gooseyirl+plrulesquiz@gmail.com"
+private let rulesBookURL = URL(string: "https://www.powerlifting.sport/fileadmin/ipf/data/rules/technical-rules/english/2026_IPF_Technical_Rulebook__effective_01_March_2026__v3.pdf")!
 
 struct ReviewView: View {
     @Environment(QuizViewModel.self) private var quizViewModel
@@ -90,9 +91,11 @@ private struct AnswerReviewRow: View {
                 Text("Rule Reference:")
                     .font(.caption)
                     .foregroundStyle(.secondary)
-                Text(question.ruleReference.fullReference)
-                    .font(.caption)
-                    .foregroundStyle(.blue)
+                Link(destination: rulesBookURL) {
+                    Text(question.ruleReference.fullReference)
+                        .font(.caption)
+                        .underline()
+                }
             }
 
             // Explanation

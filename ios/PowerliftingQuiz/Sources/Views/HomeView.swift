@@ -59,12 +59,11 @@ struct HomeView: View {
                 // Secondary actions
                 VStack(spacing: 12) {
                     Link(destination: rulesBookURL) {
-                        Label("Based on IPF Technical Rules (March 2026)", systemImage: "doc.text")
+                        Text("Based on IPF Technical Rules (March 2026)")
                             .font(.footnote)
-                            .foregroundStyle(.secondary)
+                            .underline()
                             .frame(maxWidth: .infinity)
                     }
-                    .buttonStyle(.plain)
 
                     Button {
                         showSuggestDialog = true
