@@ -60,9 +60,7 @@ struct HomeView: View {
 
                 // Secondary actions
                 VStack(spacing: 12) {
-                    Button {
-                        openURL(rulesBookURL)
-                    } label: {
+                    Link(destination: rulesBookURL) {
                         Label("Based on IPF Technical Rules (March 2026)", systemImage: "doc.text")
                             .font(.footnote)
                             .foregroundStyle(.secondary)
