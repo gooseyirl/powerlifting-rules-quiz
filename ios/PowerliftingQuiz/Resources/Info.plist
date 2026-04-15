@@ -29,6 +29,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<false/>
 	</dict>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>This app uses advertising to remain free. Allow tracking to receive ads that are more relevant to you.</string>
 	<key>TARGETED_DEVICE_FAMILY</key>
 	<string>1</string>
 	<key>UILaunchScreen</key>

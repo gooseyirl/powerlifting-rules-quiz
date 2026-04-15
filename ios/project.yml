@@ -77,3 +77,4 @@ targets:
         TARGETED_DEVICE_FAMILY: "1"
         NSAppTransportSecurity:
           NSAllowsArbitraryLoads: false
+        NSUserTrackingUsageDescription: "This app uses advertising to remain free. Allow tracking to receive ads that are more relevant to you."

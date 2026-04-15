@@ -14,6 +14,7 @@
 		08E618571A97999377926075 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09BA3D767A29CCB98C28C94 /* QuizView.swift */; };
 		16072B6481482F5D28D334DC /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225CE663873EC7E6AD1F8C85 /* QuizQuestion.swift */; };
 		2DE5C0B0E8245227ED12B692 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E33E62030C53D3DE0DDE4D /* QuizViewModel.swift */; };
+		3A37381B17ED9732C8F69F31 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6666AF8B12E6177623FD4FE9 /* PrivacyInfo.xcprivacy */; };
 		404DF2C68E56EDE85A301CDA /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 81FDC37353E0C927815A59E6 /* questions.json */; };
 		53F60FC42E6B238BD7DD64D0 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784FB5DCF497A2EC510E8AE5 /* ReviewView.swift */; };
 		55F2CBD6926CBB176E14DACD /* QuizSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659BC04E46E234CBAEE9F658 /* QuizSetupView.swift */; };
@@ -43,6 +44,7 @@
 		225CE663873EC7E6AD1F8C85 /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
 		328AC3894B5FDE3448639AC7 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		659BC04E46E234CBAEE9F658 /* QuizSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSetupView.swift; sourceTree = "<group>"; };
+		6666AF8B12E6177623FD4FE9 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		71A20C7EF32E33AC76048EAE /* QuizResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResult.swift; sourceTree = "<group>"; };
 		784FB5DCF497A2EC510E8AE5 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		81FDC37353E0C927815A59E6 /* questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = questions.json; path = ../shared/questions.json; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				DD17929665E219FA5CC534AF /* Assets.xcassets */,
 				C6A8B5C80EC2EC9C5A46453C /* Info.plist */,
+				6666AF8B12E6177623FD4FE9 /* PrivacyInfo.xcprivacy */,
 			);
 			name = Resources;
 			path = PowerliftingQuiz/Resources;
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56BFDEEE42A745CE58F214DB /* Assets.xcassets in Resources */,
+				3A37381B17ED9732C8F69F31 /* PrivacyInfo.xcprivacy in Resources */,
 				404DF2C68E56EDE85A301CDA /* questions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
