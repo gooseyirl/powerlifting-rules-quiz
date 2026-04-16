@@ -36,11 +36,11 @@ KEY FEATURES
 • Judging procedures and referee signals
 • Personal equipment regulations
 
-🎯 Interactive Quiz Experience
-• 10 randomly selected questions per quiz session
+🎯 Flexible Quiz Experience
+• Choose from 10, 25, or 50 questions per session
+• Randomly selected questions each time
 • Multiple-choice format for easy learning
 • Visual progress tracking throughout the quiz
-• Immediate feedback on your performance
 
 📊 Detailed Results & Analytics
 • Comprehensive score summary with percentage
@@ -93,10 +93,10 @@ The question bank is regularly expanded and updated to provide comprehensive cov
 
 HOW IT WORKS
 
-1. Start a quiz with 10 random questions
+1. Choose your quiz length: 10, 25, or 50 questions
 2. Select your answers from multiple choices
 3. Submit your quiz and see your results
-4. Review answers to learn from mistakes
+4. Review answers with rulebook references to learn from mistakes
 5. Retake the quiz to improve your score
 
 NO TRACKING, NO HASSLE

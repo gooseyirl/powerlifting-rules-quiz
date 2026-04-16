@@ -47,12 +47,12 @@
 		328AC3894B5FDE3448639AC7 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		4954A3FC8505F3F119877B56 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		659BC04E46E234CBAEE9F658 /* QuizSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSetupView.swift; sourceTree = "<group>"; };
-		6666AF8B12E6177623FD4FE9 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		6666AF8B12E6177623FD4FE9 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		71A20C7EF32E33AC76048EAE /* QuizResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResult.swift; sourceTree = "<group>"; };
 		784FB5DCF497A2EC510E8AE5 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		81FDC37353E0C927815A59E6 /* questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = questions.json; path = ../shared/questions.json; sourceTree = "<group>"; };
 		9E8CA3CD2640E2FF8A4C5114 /* QuizRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepository.swift; sourceTree = "<group>"; };
-		A94E91B685DAA557AC49B5C6 /* PowerliftingQuiz.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PowerliftingQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A94E91B685DAA557AC49B5C6 /* PowerliftingQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerliftingQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B41D7E2575087014AC80D8CE /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		B5EA116BEF4977B0F719309A /* PowerliftingQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerliftingQuizApp.swift; sourceTree = "<group>"; };
 		BD0EAB1DFA62037018862FC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -460,7 +460,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = RG72PZGLF9;
 				INFOPLIST_FILE = PowerliftingQuiz/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,6 +470,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gooseco.technicalrulesquiz;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "PowerliftingQuiz AppStore";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;

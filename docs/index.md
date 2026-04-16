@@ -6,9 +6,14 @@ permalink: /
 
 # Powerlifting Rules Quiz
 
-Master the IPF Technical Rules Book with this comprehensive quiz application!
+Master the IPF Technical Rules Book with this comprehensive quiz application, available on Android and iOS!
 
 Powerlifting Rules Quiz is the perfect study companion for powerlifters, coaches, referees, and anyone involved in International Powerlifting Federation competitions. This app helps you learn and test your knowledge of the official technical rules governing IPF powerlifting meets.
+
+## Download
+
+- **Android**: [Google Play Store](https://play.google.com/store/apps/details?id=com.gooseco.technicalrulesquiz)
+- **iOS**: Coming soon on the App Store
 
 ## Key Features
 
@@ -19,11 +24,11 @@ Powerlifting Rules Quiz is the perfect study companion for powerlifters, coaches
 - Judging procedures and referee signals
 - Personal equipment regulations
 
-**Interactive Quiz Experience**
-- 10 randomly selected questions per quiz session
+**Flexible Quiz Experience**
+- Choose from 10, 25, or 50 questions per session
+- Randomly selected questions each time
 - Multiple-choice format for easy learning
 - Visual progress tracking throughout the quiz
-- Immediate feedback on your performance
 
 **Detailed Results & Review**
 - Comprehensive score summary with percentage
@@ -32,17 +37,12 @@ Powerlifting Rules Quiz is the perfect study companion for powerlifters, coaches
 - Review every question and answer after completing the quiz
 - Detailed explanations for each question
 - Exact rulebook references (section, rule number, page)
-
-**Clean, Modern Design**
-- Material Design 3 interface
-- Powerlifting-themed colour scheme
-- Easy-to-read text and clear layouts
-- Smooth navigation and intuitive controls
+- Tap any reference to open the relevant page in the official rulebook
 
 **Privacy-First**
-- Completely offline — no internet required
 - No data collection or tracking
-- No permissions required
+- No user accounts required
+- All quiz content is bundled with the app
 
 ## Who Is This For?
 
@@ -58,10 +58,10 @@ All questions are based on the IPF Technical Rules Book (March 2026 version). Th
 
 ## How It Works
 
-1. Start a quiz with 10 random questions
+1. Choose your quiz length: 10, 25, or 50 questions
 2. Select your answers from multiple choices
-3. Submit your quiz and see your results
-4. Review answers to learn from mistakes
+3. See your score and pass/fail result
+4. Review answers with rulebook references to learn from mistakes
 5. Retake the quiz to improve your score
 
 ---

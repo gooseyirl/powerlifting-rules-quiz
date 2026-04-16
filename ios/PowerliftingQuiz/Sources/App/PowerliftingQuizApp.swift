@@ -4,17 +4,15 @@ import AppTrackingTransparency
 
 @main
 struct PowerliftingQuizApp: App {
-    init() {
-        MobileAds.initialize()
-    }
-
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .onAppear {
-                    // Request ATT on first launch; AdMob serves non-personalised
-                    // ads if the user declines — no action needed on the result.
-                    ATTrackingManager.requestTrackingAuthorization { _ in }
+                    // Request ATT before initialising AdMob so the prompt appears
+                    // before any tracking-related SDK activity begins.
+                    ATTrackingManager.requestTrackingAuthorization { _ in
+                        MobileAds.initialize()
+                    }
                 }
         }
     }
