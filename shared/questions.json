@@ -502,6 +502,107 @@
       },
       "ruleQuote": "Three unsuccessful attempts in any lift will automatically eliminate the lifter from the overall competition. He may still compete for awards on individual lifts if he makes bona fide attempts on each of the lifts",
       "status": "validated"
+    },
+    {
+      "id": 26,
+      "question": "Which of these is acceptable footwear on the platform?",
+      "options": [
+        "Deadlift slippers",
+        "Bare feet",
+        "Socks with a rubber sole",
+        "All of the above"
+      ],
+      "correctAnswerIndex": 0,
+      "pinLast": true,
+      "difficulty": "easy",
+      "ruleReference": {
+        "section": "Personal Equipment",
+        "subsection": "Shoes or Boots",
+        "ruleNumber": "3.7",
+        "pageNumber": 17
+      },
+      "ruleQuote": "Shoes or boots shall be worn. (a) Shoes shall be taken to include only indoor sports shoes/sports boots; Weightlifting/Powerlifting boots or Deadlift slippers.",
+      "status": "validated"
+    },
+    {
+      "id": 27,
+      "question": "Who officiates each lift?",
+      "options": [
+        "A Chief Referee and two side referees",
+        "A Chief Referee and three side referees",
+        "A Chief Referee and one side referee",
+        "Two referees and a Jury member"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "easy",
+      "ruleReference": {
+        "section": "Referees",
+        "subsection": "",
+        "ruleNumber": "7 (1)",
+        "pageNumber": 36
+      },
+      "ruleQuote": "The referees shall be three in number, the Chief Referee or Center Referee and two side referees.",
+      "status": "validated"
+    },
+    {
+      "id": 28,
+      "question": "How many layers of medical tape may be worn around the thumbs?",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Unlimited"
+      ],
+      "correctAnswerIndex": 1,
+      "difficulty": "hard",
+      "ruleReference": {
+        "section": "Personal Equipment",
+        "subsection": "Medical Tape",
+        "ruleNumber": "3.11",
+        "pageNumber": 18
+      },
+      "ruleQuote": "Two layers of medical tape may be worn around the thumbs.",
+      "status": "validated"
+    },
+    {
+      "id": 29,
+      "question": "May knee wraps and knee sleeves be worn at the same time?",
+      "options": [
+        "No, the combination is strictly forbidden",
+        "Yes, in equipped competition only",
+        "Yes, provided the wraps go over the sleeves",
+        "Only with the Chief Referee's approval"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "hard",
+      "ruleReference": {
+        "section": "Personal Equipment",
+        "subsection": "Wraps — Knee",
+        "ruleNumber": "3.9",
+        "pageNumber": 18
+      },
+      "ruleQuote": "IPF approved knee sleeves are allowed. A combination of the two is strictly forbidden.",
+      "status": "validated"
+    },
+    {
+      "id": 30,
+      "question": "How must the first and heaviest discs be loaded onto the bar?",
+      "options": [
+        "Face in, with the rest loaded face out",
+        "Face out, with the rest loaded face in",
+        "All discs loaded face out",
+        "Either way, provided the weight is readable"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "medium",
+      "ruleReference": {
+        "section": "Equipment and Specifications",
+        "subsection": "Bars and Discs",
+        "ruleNumber": "2.3 (b) 8",
+        "pageNumber": 9
+      },
+      "ruleQuote": "The first and heaviest discs loaded on the bar must be loaded face in; with the rest of the discs loaded face out.",
+      "status": "validated"
     }
   ]
 }

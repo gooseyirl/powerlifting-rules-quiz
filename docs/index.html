@@ -612,8 +612,13 @@ function render() {
   const q = quiz[i];
   locked = false;
 
-  // Options are shuffled so position never leaks the answer
-  const opts = shuffle(q.options.map((text, idx) => ({ text, ok: idx === q.correctAnswerIndex })));
+  // Options are shuffled so position never leaks the answer. A question may set
+  // pinLast when its final option only reads correctly at the bottom — "All of
+  // the above" — in which case the rest shuffle beneath it and it stays put.
+  const all = q.options.map((text, idx) => ({ text, ok: idx === q.correctAnswerIndex }));
+  const opts = q.pinLast
+    ? shuffle(all.slice(0, -1)).concat(all[all.length - 1])
+    : shuffle(all);
   quiz[i]._opts = opts;
 
   $('cur').textContent = i + 1;
