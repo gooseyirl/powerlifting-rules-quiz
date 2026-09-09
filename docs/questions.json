@@ -716,6 +716,206 @@
       },
       "ruleQuote": "On the completion of an attempt, a lifter shall leave the platform within 30 seconds; failure to comply with this rule may result in disqualification of the attempt at the discretion of the referees.",
       "status": "validated"
+    },
+    {
+      "id": 36,
+      "question": "What must be worn to cover the shins during the deadlift?",
+      "options": [
+        "Shin length socks",
+        "Full length leg stockings",
+        "Neoprene shin guards",
+        "Nothing is required"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "easy",
+      "ruleReference": {
+        "section": "Personal Equipment",
+        "subsection": "Socks",
+        "ruleNumber": "3.5",
+        "pageNumber": 16
+      },
+      "ruleQuote": "Shin length socks must be worn to cover and protect the shins while performing the deadlift.",
+      "status": "validated"
+    },
+    {
+      "id": 37,
+      "question": "What is the Chief Referee's command to end the bench press?",
+      "options": [
+        "“Rack”",
+        "“Down”",
+        "“Stop”",
+        "“Finish”"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "easy",
+      "ruleReference": {
+        "section": "Powerlifts and Rules of Performance",
+        "subsection": "Bench Press",
+        "ruleNumber": "4.2 (8)",
+        "pageNumber": 22
+      },
+      "ruleQuote": "When held motionless in this position the audible command “Rack” shall be given together with a backward motion of the arm.",
+      "status": "validated"
+    },
+    {
+      "id": 38,
+      "question": "Which of these may a lifter wear on their head while lifting?",
+      "options": [
+        "A Hijab",
+        "A baseball cap",
+        "A beanie",
+        "Any hat, if plain"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "easy",
+      "ruleReference": {
+        "section": "Personal Equipment",
+        "subsection": "Head Wear",
+        "ruleNumber": "3.10",
+        "pageNumber": 18
+      },
+      "ruleQuote": "Hats are strictly forbidden to be worn on the platform during lifting. Lifters may wear Hijab (head scarf) while lifting.",
+      "status": "validated"
+    },
+    {
+      "id": 39,
+      "question": "Where must a lifter's t-shirt sleeves end?",
+      "options": [
+        "Below the deltoid, but not onto or below the elbow",
+        "Below the deltoid, and no further than the wrist",
+        "At any point above the elbow, including the deltoid",
+        "Anywhere, provided the sleeves are form fitting"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "hard",
+      "ruleReference": {
+        "section": "Personal Equipment",
+        "subsection": "T-Shirt",
+        "ruleNumber": "3.2 (b)",
+        "pageNumber": 15
+      },
+      "ruleQuote": "the t-shirt must have tight fit “Form Fitting” sleeves. Those sleeves must terminate below the lifter’s deltoid and must not extend onto or below the lifter’s elbow.",
+      "status": "validated"
+    },
+    {
+      "id": 40,
+      "question": "Which referee decisions may the Jury consider reversing?",
+      "options": [
+        "Only decisions given 2 to 1",
+        "Only unanimous 3 to 0 decisions",
+        "Any decision the Jury disputes",
+        "Only decisions the lifter appeals"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "hard",
+      "ruleReference": {
+        "section": "Jury and Technical Committee",
+        "subsection": "Jury",
+        "ruleNumber": "8.1 (9)",
+        "pageNumber": 41
+      },
+      "ruleQuote": "Only in extreme circumstances when there has been an obvious or blatant mistake in the refereeing will the Jury … reverse the decision. Only 2 to 1 referees’ decision can be considered by the Jury.",
+      "status": "validated"
+    },
+    {
+      "id": 41,
+      "question": "How many Jury members must agree to overturn a referee's decision?",
+      "options": [
+        "Unanimous on a three-member Jury, a majority on a five",
+        "A majority on a three-member Jury, unanimous on a five",
+        "A majority, whether the Jury has three members or five",
+        "Unanimous, whether the Jury has three members or five"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "hard",
+      "ruleReference": {
+        "section": "Jury and Technical Committee",
+        "subsection": "Jury",
+        "ruleNumber": "8.1 (9)",
+        "pageNumber": 41
+      },
+      "ruleQuote": "Only in extreme circumstances when there has been an obvious or blatant mistake in the refereeing will the Jury in consultation verbally or electronically with the referees, by unanimous jury vote with (3) Member Jury or with Majority vote with (5) Member Jury may reverse the decision.",
+      "status": "validated"
+    },
+    {
+      "id": 42,
+      "question": "During the bench press, where must the lifter's feet be?",
+      "options": [
+        "Flat on the floor",
+        "Flat on the bench",
+        "Raised clear of the floor",
+        "Anywhere, provided they stay still"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "easy",
+      "ruleReference": {
+        "section": "Powerlifts and Rules of Performance",
+        "subsection": "Bench Press",
+        "ruleNumber": "4.2 (2)",
+        "pageNumber": 22
+      },
+      "ruleQuote": "The feet must be flat on the floor (as flat as the shape of the shoe will allow). … Foot movement is permissible but must remain flat on the platform.",
+      "status": "validated"
+    },
+    {
+      "id": 43,
+      "question": "Is adhesive permitted on the underside of footwear?",
+      "options": [
+        "No, it is strictly forbidden",
+        "Yes, resin or magnesium only",
+        "Yes, for the deadlift only",
+        "Only with the Jury's approval"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "easy",
+      "ruleReference": {
+        "section": "Personal Equipment",
+        "subsection": "General",
+        "ruleNumber": "3.14 (c)",
+        "pageNumber": 20
+      },
+      "ruleQuote": "The use of any form of adhesive on the underside of footwear is strictly forbidden. This applies to any built-in adhesive, e.g. glass paper, emery cloth, etc. and to include resin and magnesium",
+      "status": "validated"
+    },
+    {
+      "id": 44,
+      "question": "Where may baby powder, resin, talc and magnesium carbonate (chalk) be applied?",
+      "options": [
+        "To the body and attire, but not the wraps",
+        "To the body, the attire and the wraps alike",
+        "To the body only, not to attire or wraps",
+        "To the wraps only, in order to improve grip"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "medium",
+      "ruleReference": {
+        "section": "Personal Equipment",
+        "subsection": "General",
+        "ruleNumber": "3.14 (b)",
+        "pageNumber": 20
+      },
+      "ruleQuote": "Baby powder, resin, talc or magnesium carbonates are the only substances that may be added to the body and attire, but not to the wraps.",
+      "status": "validated"
+    },
+    {
+      "id": 45,
+      "question": "How must knee sleeves be worn in competition?",
+      "options": [
+        "Centred, clear of the socks and of the suit unless long-legged",
+        "Centred, clear of the socks and of the suit without exception",
+        "Centred, clear of the suit unless long-legged, socks may touch",
+        "Centred, clear of the socks, and the suit may always be touched"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "hard",
+      "ruleReference": {
+        "section": "Personal Equipment",
+        "subsection": "Knee Sleeves",
+        "ruleNumber": "3.8 (d)",
+        "pageNumber": 17
+      },
+      "ruleQuote": "When worn by the lifter in competition, knee sleeves must not be in contact with the lifter’s suit (other than long - legged) or socks and must be centered over the knee joint.",
+      "status": "validated"
     }
   ]
 }
