@@ -916,6 +916,106 @@
       },
       "ruleQuote": "When worn by the lifter in competition, knee sleeves must not be in contact with the lifter’s suit (other than long - legged) or socks and must be centered over the knee joint.",
       "status": "validated"
+    },
+    {
+      "id": 46,
+      "question": "After racking the bar in the squat, may the lifter walk forward out of the rack?",
+      "options": [
+        "No, they must not walk out through the front",
+        "Yes, once the bar is back in the racks",
+        "Yes, if the spotters have stepped away",
+        "Only if the platform is clear in front of them"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "easy",
+      "ruleReference": {
+        "section": "Powerlifts and Rules of Performance",
+        "subsection": "Squat",
+        "ruleNumber": "4.1 (5)",
+        "pageNumber": 21
+      },
+      "ruleQuote": "The lifter must stay with the bar during this process. The lifter is not allowed to walk out through the front of the rack after completion of the lift.",
+      "status": "validated"
+    },
+    {
+      "id": 47,
+      "question": "At what point is a squat attempt deemed to have commenced?",
+      "options": [
+        "When the lifter's knees unlock",
+        "When the “Squat” command is given",
+        "When the bar leaves the racks",
+        "When the hips drop below the knees"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "medium",
+      "ruleReference": {
+        "section": "Powerlifts and Rules of Performance",
+        "subsection": "Squat",
+        "ruleNumber": "4.1 (3)",
+        "pageNumber": 21
+      },
+      "ruleQuote": "Only one descent attempt is allowed. The attempt is deemed to have commenced when the lifters knees have unlocked.",
+      "status": "validated"
+    },
+    {
+      "id": 48,
+      "question": "What is the maximum height of blocks used for footing in the bench press?",
+      "options": [
+        "20 cm",
+        "30 cm",
+        "40 cm",
+        "50 cm"
+      ],
+      "correctAnswerIndex": 1,
+      "difficulty": "hard",
+      "ruleReference": {
+        "section": "Powerlifts and Rules of Performance",
+        "subsection": "Bench Press",
+        "ruleNumber": "4.2 (3)",
+        "pageNumber": 22
+      },
+      "ruleQuote": "the lifter may use flat surfaced plates, or blocks not exceeding 30 cm in total height and a minimum dimension of 60 cm x 40 cm, to build up the surface of the platform.",
+      "status": "validated"
+    },
+    {
+      "id": 49,
+      "question": "Which of these may a lifter do within view of the public?",
+      "options": [
+        "Adjust their belt",
+        "Use ammonia",
+        "Adjust their lifting suit",
+        "Put on their knee wraps"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "hard",
+      "ruleReference": {
+        "section": "Order of Competition",
+        "subsection": "Miscellaneous Rules",
+        "ruleNumber": "6.3 (2)",
+        "pageNumber": 33
+      },
+      "ruleQuote": "A lifter shall not wrap, adjust his costume or use ammonia within view of the public. The only exception to this rule being that he may adjust his belt.",
+      "status": "validated"
+    },
+    {
+      "id": 50,
+      "question": "How low may the bar sit on the lifter's back in the squat?",
+      "options": [
+        "No lower than the posterior deltoid",
+        "No lower than the top of the shoulder",
+        "No lower than the bottom of the shoulder blades",
+        "Any position the lifter can control"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "hard",
+      "ruleReference": {
+        "section": "Powerlifts and Rules of Performance",
+        "subsection": "Squat",
+        "ruleNumber": "4.1 (1)",
+        "pageNumber": 20
+      },
+      "ruleQuote": "The lifter shall face the front of the platform, with the barbell placed horizontally across the shoulders, at a height no lower than the posterior deltoid level.",
+      "status": "validated"
     }
   ]
 }
