@@ -165,16 +165,27 @@ button.chip-count:disabled{color:var(--mute);border-color:var(--line)}
 }
 
 /* ── Progress: plates loaded on a bar ────────────── */
-.bar{display:flex;gap:4px;margin-bottom:30px}
+.bar{display:flex;gap:4px;margin-bottom:22px}
+/* Each plate is a button once its question is answered, so you can go back
+   and re-read it. The padding is the tap target; the <i> is the visible bar. */
 .plate{
-  flex:1;height:4px;border-radius:2px;
+  flex:1;display:block;
+  padding:8px 0;margin:0;border:0;background:none;
+  cursor:default;
+}
+.plate:not(:disabled){cursor:pointer}
+.plate:focus-visible{outline:2px solid var(--paper);outline-offset:2px;border-radius:3px}
+.plate i{
+  display:block;height:4px;border-radius:2px;
   background:var(--ink-3);
   transition:background var(--mid) var(--ease),transform var(--mid) var(--ease);
   transform-origin:center;
 }
-.plate.hit{background:var(--paper)}
-.plate.miss{background:var(--red-light)}
-.plate.now{background:var(--mute);transform:scaleY(2.2)}
+.plate.hit i{background:var(--paper)}
+.plate.miss i{background:var(--red-light)}
+.plate.now i{background:var(--mute);transform:scaleY(2.2)}
+.plate.viewing i{transform:scaleY(2.8)}
+.plate:not(:disabled):hover i{transform:scaleY(2.2)}
 
 /* ── Question ────────────────────────────────────── */
 .q-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
@@ -322,6 +333,17 @@ button.chip-count:disabled{color:var(--mute);border-color:var(--line)}
 
 .next-wrap{margin-top:26px}
 
+/* Read-only review of an already answered question */
+.review-nav{margin-top:26px}
+.rn-row{display:flex;gap:9px;margin-bottom:9px}
+.rn-row .btn-quiet{flex:1;margin:0}
+.btn-quiet:disabled{opacity:.28;cursor:default;background:transparent}
+.viewing-note{
+  font-size:.68rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:.14em;
+  color:var(--mute);margin-bottom:12px;
+}
+
 /* ── Done ────────────────────────────────────────── */
 .done{flex:1;display:flex;flex-direction:column;justify-content:center;gap:22px;padding:20px 0}
 .score{display:flex;align-items:baseline;gap:14px}
@@ -332,11 +354,18 @@ button.chip-count:disabled{color:var(--mute);border-color:var(--line)}
 .review{display:flex;flex-direction:column;gap:1px;margin:6px 0 4px}
 .rev{
   display:flex;gap:12px;align-items:flex-start;
+  width:100%;text-align:left;
   padding:13px 0;
-  border-top:1px solid var(--line);
-  font-size:.9rem;
+  border:0;border-top:1px solid var(--line);
+  background:none;color:inherit;
+  font-family:inherit;font-size:.9rem;
+  cursor:pointer;
   animation:optIn var(--mid) var(--ease) backwards;
+  transition:background var(--fast) var(--ease);
 }
+.rev:hover{background:var(--ink-2)}
+.rev:focus-visible{outline:2px solid var(--paper);outline-offset:-2px}
+.rev .chev{margin-left:auto;color:var(--mute);flex:none;align-self:center}
 .rev:last-child{border-bottom:1px solid var(--line)}
 .mark{
   font-family:'Anton',sans-serif;font-size:.8rem;
@@ -398,12 +427,20 @@ footer a{color:var(--mute)}
       <span class="badge" id="badge">Easy</span>
     </div>
     <div class="q-body" id="qbody">
+      <div class="viewing-note" id="viewnote" hidden>Reviewing your answer</div>
       <h2 class="q-text" id="qtext"></h2>
       <div class="options" id="opts"></div>
     </div>
     <div id="explain"></div>
     <div class="next-wrap" id="nextwrap" hidden>
       <button class="btn" id="next">Next</button>
+    </div>
+    <div class="review-nav" id="reviewnav" hidden>
+      <div class="rn-row">
+        <button class="btn btn-quiet" id="rev-prev">← Previous</button>
+        <button class="btn btn-quiet" id="rev-next">Next →</button>
+      </div>
+      <button class="btn" id="rev-back">Back</button>
     </div>
   </section>
 
@@ -467,6 +504,9 @@ const shuffle = a => a.map(v => [Math.random(), v]).sort((x, y) => x[0] - y[0]).
   $('again').addEventListener('click', start);
   $('home').addEventListener('click', () => show('s-start'));
   $('next').addEventListener('click', advance);
+  $('rev-prev').addEventListener('click', () => openReview(reviewIdx - 1, reviewFrom));
+  $('rev-next').addEventListener('click', () => openReview(reviewIdx + 1, reviewFrom));
+  $('rev-back').addEventListener('click', closeReview);
 
   document.addEventListener('keydown', e => {
     if ($('s-start').classList.contains('on') && (e.key === 'Enter' || e.key === ' ')) {
@@ -476,6 +516,15 @@ const shuffle = a => a.map(v => [Math.random(), v]).sort((x, y) => x[0] - y[0]).
       e.preventDefault(); start(); return;
     }
     if (!$('s-quiz').classList.contains('on')) return;
+
+    // Reviewing a past answer — arrows step through, Escape returns
+    if (reviewIdx !== null) {
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); openReview(reviewIdx - 1, reviewFrom); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); openReview(reviewIdx + 1, reviewFrom); }
+      if (e.key === 'Escape' || e.key === 'Enter') { e.preventDefault(); closeReview(); }
+      return;
+    }
+
     if (!locked) {
       const n = parseInt(e.key, 10);
       if (n >= 1 && n <= 4) {
@@ -633,81 +682,54 @@ function draw() {
   return shuffle(tiers.flatMap(t => pool[t].slice(0, take[t])));
 }
 
+let reviewIdx = null;      // null while answering; otherwise an index into results
+let reviewFrom = 'quiz';   // where the Back button returns to
+
 function start() {
   quiz = draw();
   if (!quiz.length) return;
-  i = 0; results = [];
+  i = 0; results = []; reviewIdx = null;
   $('tot').textContent = quiz.length;
-  $('bar').innerHTML = quiz.map(() => '<span class="plate"></span>').join('');
+  $('bar').innerHTML = quiz
+    .map(() => '<button type="button" class="plate" disabled><i></i></button>').join('');
+  [...$('bar').children].forEach((b, n) =>
+    b.addEventListener('click', () => openReview(n, 'quiz')));
   render();
   show('s-quiz');
 }
 
-function render() {
-  const q = quiz[i];
-  locked = false;
-
-  // Options are shuffled so position never leaks the answer. A question may set
-  // pinLast when its final option only reads correctly at the bottom — "All of
-  // the above" — in which case the rest shuffle beneath it and it stays put.
-  const all = q.options.map((text, idx) => ({ text, ok: idx === q.correctAnswerIndex }));
-  const opts = q.pinLast
-    ? shuffle(all.slice(0, -1)).concat(all[all.length - 1])
-    : shuffle(all);
-  quiz[i]._opts = opts;
-
-  $('cur').textContent = i + 1;
+/* ── shared rendering ─────────────────────────── */
+function paintHead(q, num) {
+  $('cur').textContent = num;
   $('badge').textContent = q.difficulty || '';
   $('badge').className = 'badge ' + (q.difficulty || '');
   $('qtext').textContent = q.question;
+}
 
-  const box = $('opts');
-  box.innerHTML = opts.map((o, n) =>
-    `<button class="opt"><span class="num">${n + 1}</span><span>${esc(o.text)}</span></button>`
+function drawOptions(opts, answerable) {
+  $('opts').innerHTML = opts.map((o, n) =>
+    `<button class="opt"${answerable ? '' : ' disabled'}><span class="num">${n + 1}</span><span>${esc(o.text)}</span></button>`
   ).join('');
-  [...box.children].forEach((b, n) => b.addEventListener('click', () => pick(n)));
+}
 
-  $('explain').innerHTML = '';
-  $('nextwrap').hidden = true;
-  $('next').textContent = i === quiz.length - 1 ? 'See Results' : 'Next';
-
-  // restart entry animations
-  const body = $('qbody');
+function replayEnter() {
+  const box = $('opts'), body = $('qbody');
   box.classList.remove('enter'); body.classList.remove('enter');
   void box.offsetWidth;
   box.classList.add('enter'); body.classList.add('enter');
-
-  paintBar();
 }
 
-function paintBar() {
-  [...$('bar').children].forEach((p, n) => {
-    p.className = 'plate';
-    if (n < results.length) p.classList.add(results[n].ok ? 'hit' : 'miss');
-    else if (n === i) p.classList.add('now');
-  });
-}
-
-function pick(n) {
-  if (locked) return;
-  locked = true;
-
-  const q = quiz[i];
-  const opts = q._opts;
-  const ok = opts[n].ok;
-  results.push({ q, ok, chose: opts[n].text });
-
+// Colour the options and fill the explanation for an answered question.
+// Driven entirely by stored data, so it renders the same live or in review.
+function paintAnswered(q, opts, pickIdx, ok) {
   [...$('opts').children].forEach((b, k) => {
     b.disabled = true;
-    if (k === n) b.classList.add(ok ? 'good' : 'bad');
+    if (k === pickIdx) b.classList.add(ok ? 'good' : 'bad');
     else if (opts[k].ok) b.classList.add('reveal');
     else b.classList.add('dim');
   });
 
-  // A question may carry a second citation — rules that explain why the other
-  // options are wrong — rendered under the primary quote with its own link.
   const also = q.alsoSee;
-
   $('explain').innerHTML =
     `<div class="explain">
        <div class="verdict ${ok ? 'good' : 'bad'}">${ok ? 'Good lift' : 'No lift'}</div>
@@ -722,16 +744,119 @@ function pick(n) {
            ${refLink(also.ruleReference)}
          </div>` : ''}
      </div>`;
+}
 
+/* ── answering ────────────────────────────────── */
+function render() {
+  const q = quiz[i];
+  locked = false;
+  reviewIdx = null;
+
+  // Options are shuffled so position never leaks the answer. A question may set
+  // pinLast when its final option only reads correctly at the bottom — "All of
+  // the above" — in which case the rest shuffle beneath it and it stays put.
+  const all = q.options.map((text, idx) => ({ text, ok: idx === q.correctAnswerIndex }));
+  quiz[i]._opts = q.pinLast
+    ? shuffle(all.slice(0, -1)).concat(all[all.length - 1])
+    : shuffle(all);
+
+  paintHead(q, i + 1);
+  drawOptions(quiz[i]._opts, true);
+  [...$('opts').children].forEach((b, n) => b.addEventListener('click', () => pick(n)));
+
+  $('explain').innerHTML = '';
+  $('viewnote').hidden = true;
+  $('nextwrap').hidden = true;
+  $('reviewnav').hidden = true;
+  $('next').textContent = i === quiz.length - 1 ? 'See Results' : 'Next';
+
+  replayEnter();
+  paintBar();
+}
+
+function paintBar() {
+  [...$('bar').children].forEach((p, n) => {
+    p.className = 'plate';
+    const answered = n < results.length;
+    if (answered) p.classList.add(results[n].ok ? 'hit' : 'miss');
+    else if (n === i) p.classList.add('now');
+    if (reviewIdx === n) p.classList.add('viewing');
+    p.disabled = !answered;
+    p.setAttribute('aria-label',
+      answered ? `Question ${n + 1}, ${results[n].ok ? 'correct' : 'incorrect'} — review it`
+               : `Question ${n + 1}, not yet answered`);
+  });
+}
+
+function pick(n) {
+  if (locked || reviewIdx !== null) return;
+  locked = true;
+
+  const q = quiz[i];
+  const opts = q._opts;
+  const ok = opts[n].ok;
+  results.push({ q, ok, opts, pick: n, chose: opts[n].text });
+
+  paintAnswered(q, opts, n, ok);
   $('nextwrap').hidden = false;
   paintBar();
 }
 
 function advance() {
-  if (!locked) return;
+  if (!locked || reviewIdx !== null) return;
   i++;
   if (i >= quiz.length) finish();
   else render();
+}
+
+/* ── read-only review of an answered question ─── */
+function openReview(n, from) {
+  if (n < 0 || n >= results.length) return;
+  reviewIdx = n;
+  reviewFrom = from;
+
+  const r = results[n];
+  paintHead(r.q, n + 1);
+  drawOptions(r.opts, false);          // no click handlers — cannot re-answer
+  paintAnswered(r.q, r.opts, r.pick, r.ok);
+
+  $('viewnote').hidden = false;
+  $('nextwrap').hidden = true;
+  $('reviewnav').hidden = false;
+  $('rev-prev').disabled = n === 0;
+  $('rev-next').disabled = n === results.length - 1;
+  $('rev-back').textContent =
+    from === 'results' ? 'Back to results' : `Back to question ${i + 1}`;
+
+  replayEnter();
+  paintBar();
+  show('s-quiz');
+}
+
+function closeReview() {
+  if (reviewIdx === null) return;
+  reviewIdx = null;
+
+  if (reviewFrom === 'results') { show('s-done'); return; }
+
+  // Restore the live question exactly as it was — same option order, and the
+  // answered state if one was already given.
+  const q = quiz[i];
+  paintHead(q, i + 1);
+  drawOptions(q._opts, !locked);
+  if (locked) {
+    const r = results[results.length - 1];
+    paintAnswered(q, q._opts, r.pick, r.ok);
+    $('nextwrap').hidden = false;
+  } else {
+    [...$('opts').children].forEach((b, n) => b.addEventListener('click', () => pick(n)));
+    $('explain').innerHTML = '';
+    $('nextwrap').hidden = true;
+  }
+  $('viewnote').hidden = true;
+  $('reviewnav').hidden = true;
+  replayEnter();
+  paintBar();
 }
 
 function finish() {
@@ -746,14 +871,19 @@ function finish() {
 
   $('review').innerHTML = results.map((r, k) => {
     const right = r.q.options[r.q.correctAnswerIndex];
-    return `<div class="rev" style="animation-delay:${0.03 * k}s">
+    return `<button type="button" class="rev" style="animation-delay:${0.03 * k}s">
       <span class="mark ${r.ok ? 'good' : 'bad'}">${r.ok ? '✓' : '✕'}</span>
       <div>
         <div class="rev-q">${esc(r.q.question)}</div>
         ${r.ok ? '' : `<div class="rev-a">You chose ${esc(r.chose)} — correct answer: <b>${esc(right)}</b></div>`}
       </div>
-    </div>`;
+      <span class="chev">›</span>
+    </button>`;
   }).join('');
+
+  // tapping a row reopens that question with its full context
+  [...$('review').children].forEach((b, k) =>
+    b.addEventListener('click', () => openReview(k, 'results')));
 
   show('s-done');
 }
