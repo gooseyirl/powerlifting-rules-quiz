@@ -402,6 +402,106 @@
       },
       "ruleQuote": "The Jury shall consist of three or five Category 1 referees.",
       "status": "validated"
+    },
+    {
+      "id": 21,
+      "question": "What is the combined weight of the bar and collars?",
+      "options": [
+        "20 kg",
+        "25 kg",
+        "27.5 kg",
+        "30 kg"
+      ],
+      "correctAnswerIndex": 1,
+      "difficulty": "easy",
+      "ruleReference": {
+        "section": "Equipment and Specifications",
+        "subsection": "Bars and Discs",
+        "ruleNumber": "2.3 (a) 4",
+        "pageNumber": 8
+      },
+      "ruleQuote": "Weight of the bar and collars are to be 25 kg.",
+      "status": "validated"
+    },
+    {
+      "id": 22,
+      "question": "Is the use of oil or grease on the body permitted?",
+      "options": [
+        "No, it is strictly forbidden",
+        "Yes, to help fit knee sleeves",
+        "Yes, on the thighs only",
+        "Only with the Jury's approval"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "easy",
+      "ruleReference": {
+        "section": "Personal Equipment",
+        "subsection": "General",
+        "ruleNumber": "3.14 (a)",
+        "pageNumber": 20
+      },
+      "ruleQuote": "The use of oil, grease or other lubricants on the body, or personal equipment is strictly forbidden.",
+      "status": "validated"
+    },
+    {
+      "id": 23,
+      "question": "Is the reverse grip permitted in the bench press?",
+      "options": [
+        "No, the reverse grip is forbidden",
+        "Yes, in all competitions",
+        "Yes, in equipped competition only",
+        "Only with the Chief Referee's approval"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "medium",
+      "ruleReference": {
+        "section": "Powerlifts and Rules of Performance",
+        "subsection": "Bench Press",
+        "ruleNumber": "4.2 (5)",
+        "pageNumber": 22
+      },
+      "ruleQuote": "The use of the reverse grip is forbidden.",
+      "status": "validated"
+    },
+    {
+      "id": 24,
+      "question": "In the bench press, how far must the bar be lowered?",
+      "options": [
+        "To the chest or abdominal area, elbows at or below the shoulders",
+        "To the chest or abdominal area, upper arms parallel to the floor",
+        "To the chest only, elbows at or below the shoulders",
+        "To the chest only, upper arms parallel to the floor"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "medium",
+      "ruleReference": {
+        "section": "Powerlifts and Rules of Performance",
+        "subsection": "Bench Press",
+        "ruleNumber": "4.2 (8)",
+        "pageNumber": 22
+      },
+      "ruleQuote": "The lifter must lower the bar to the chest or abdominal area whereby the underside of both elbow joints is lowered level with or below the top surface of each respective shoulder joint",
+      "status": "validated"
+    },
+    {
+      "id": 25,
+      "question": "What happens to a lifter who fails all three attempts at one lift?",
+      "options": [
+        "Out of the total, but still eligible for individual lift awards",
+        "Out of the competition entirely, including all individual awards",
+        "Out of that lift only, with the total still standing",
+        "Allowed a fourth attempt at the discretion of the Jury"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "hard",
+      "ruleReference": {
+        "section": "Order of Competition",
+        "subsection": "Miscellaneous Rules",
+        "ruleNumber": "6.3 (6)",
+        "pageNumber": 35
+      },
+      "ruleQuote": "Three unsuccessful attempts in any lift will automatically eliminate the lifter from the overall competition. He may still compete for awards on individual lifts if he makes bona fide attempts on each of the lifts",
+      "status": "validated"
     }
   ]
 }
