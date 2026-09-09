@@ -296,6 +296,20 @@ button.chip-count:disabled{color:var(--mute);border-color:var(--line)}
 }
 .ref:hover{color:var(--paper);border-color:var(--mute)}
 
+/* Secondary citation — rules explaining why the other options are not failures */
+.also{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.also-label{
+  font-size:.66rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:.13em;
+  color:var(--mute);margin-bottom:8px;
+}
+.also-list{margin:0 0 9px;padding-left:16px}
+.also-list li{
+  font-size:.85rem;color:#B8B7B3;
+  font-style:italic;line-height:1.5;margin-bottom:5px;
+}
+.also-list li::marker{color:var(--mute)}
+
 .next-wrap{margin-top:26px}
 
 /* ── Done ────────────────────────────────────────── */
@@ -411,6 +425,15 @@ let bank = [], quiz = [], i = 0, results = [], locked = false;
 
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const refLink = ref => {
+  if (!ref) return '';
+  let t = 'Rule ' + (ref.ruleNumber || '');
+  if (ref.subsection) t += ' \u00B7 ' + ref.subsection;
+  else if (ref.section) t += ' \u00B7 ' + ref.section;
+  if (ref.pageNumber) t += ' \u00B7 p.' + ref.pageNumber;
+  const href = RULEBOOK + (ref.pageNumber ? '#page=' + ref.pageNumber : '');
+  return `<a class="ref" href="${href}" target="_blank" rel="noopener">${esc(t)} \u2197</a>`;
+};
 const shuffle = a => a.map(v => [Math.random(), v]).sort((x, y) => x[0] - y[0]).map(p => p[1]);
 
 /* ── Boot ─────────────────────────────────────── */
@@ -669,18 +692,23 @@ function pick(n) {
     else b.classList.add('dim');
   });
 
-  const ref = q.ruleReference || {};
-  let refText = 'Rule ' + (ref.ruleNumber || '');
-  if (ref.subsection) refText += ' · ' + ref.subsection;
-  else if (ref.section) refText += ' · ' + ref.section;
-  if (ref.pageNumber) refText += ' · p.' + ref.pageNumber;
+  // A question may carry a second citation — rules that explain why the other
+  // options are wrong — rendered under the primary quote with its own link.
+  const also = q.alsoSee;
 
   $('explain').innerHTML =
     `<div class="explain">
        <div class="verdict ${ok ? 'good' : 'bad'}">${ok ? 'Good lift' : 'No lift'}</div>
        ${q.ruleQuote ? `<p class="quote">${esc(q.ruleQuote)}</p>` : ''}
-       <a class="ref" href="${RULEBOOK}${ref.pageNumber ? '#page=' + ref.pageNumber : ''}"
-          target="_blank" rel="noopener">${esc(refText)} ↗</a>
+       ${refLink(q.ruleReference)}
+       ${also ? `
+         <div class="also">
+           ${also.label ? `<div class="also-label">${esc(also.label)}</div>` : ''}
+           <ul class="also-list">
+             ${also.ruleQuotes.map(t => `<li>${esc(t)}</li>`).join('')}
+           </ul>
+           ${refLink(also.ruleReference)}
+         </div>` : ''}
      </div>`;
 
   $('nextwrap').hidden = false;

@@ -603,6 +603,119 @@
       },
       "ruleQuote": "The first and heaviest discs loaded on the bar must be loaded face in; with the rest of the discs loaded face out.",
       "status": "validated"
+    },
+    {
+      "id": 31,
+      "question": "In the squat, what happens if the lifter is not in position five seconds after unracking?",
+      "options": [
+        "The Chief Referee commands “Replace”",
+        "The Chief Referee commands “Rack”",
+        "The attempt is immediately failed",
+        "The Chief Referee commands “Re-Rack”"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "medium",
+      "ruleReference": {
+        "section": "Powerlifts and Rules of Performance",
+        "subsection": "Squat",
+        "ruleNumber": "4.1 (2)",
+        "pageNumber": 21
+      },
+      "ruleQuote": "For reasons of safety the lifter will be requested to “Replace” the bar, together with a backward movement of the arm, if after a period of five seconds he is not in the correct position to begin the lift.",
+      "status": "validated"
+    },
+    {
+      "id": 32,
+      "question": "After a successful attempt, what happens if a lifter does not submit their next attempt in time?",
+      "options": [
+        "A 2.5 kg increase is applied automatically",
+        "The attempt is forfeited and cannot be taken",
+        "The previous weight is loaded a second time",
+        "The Jury nominates the weight to be loaded"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "medium",
+      "ruleReference": {
+        "section": "Order of Competition",
+        "subsection": "The Round System",
+        "ruleNumber": "6.1 (j)",
+        "pageNumber": 30
+      },
+      "ruleQuote": "If no weight is submitted within the one-minute time allowance, the lifter will be granted a 2.5 kg increase on his next attempt.",
+      "status": "validated"
+    },
+    {
+      "id": 33,
+      "question": "How long does a lifter have to submit their next attempt?",
+      "options": [
+        "30 seconds",
+        "One minute",
+        "Two minutes",
+        "Three minutes"
+      ],
+      "correctAnswerIndex": 1,
+      "difficulty": "medium",
+      "ruleReference": {
+        "section": "Order of Competition",
+        "subsection": "The Round System",
+        "ruleNumber": "6.1 (j)",
+        "pageNumber": 30
+      },
+      "ruleQuote": "A lifter must submit his second and third attempts within one minute of completing his preceding attempt. The one minute will begin from the time that the lights are activated.",
+      "status": "validated"
+    },
+    {
+      "id": 34,
+      "question": "Which one of these is a cause for disqualification in the deadlift?",
+      "options": [
+        "Releasing the bar from the palms on the way down",
+        "Moving the feet after the “Down” command",
+        "The bar edging up the thighs without being supported",
+        "The bar settling as the shoulders come back"
+      ],
+      "correctAnswerIndex": 0,
+      "difficulty": "hard",
+      "ruleReference": {
+        "section": "Powerlifts and Rules of Performance",
+        "subsection": "Causes for Disqualification of a Deadlift",
+        "ruleNumber": "4.3.1 (7)",
+        "pageNumber": 26
+      },
+      "ruleQuote": "Allowing the bar to return to the platform without maintaining control with both hands, i.e., releasing the bar from the palms of the hand.",
+      "status": "validated",
+      "alsoSee": {
+        "ruleQuotes": [
+          "Foot movement after the command “Down” will not be cause for failure.",
+          "If the bar edges up the thigh but is not supported this is not a reason for disqualification.",
+          "If the bar settles as the shoulders come back (slightly downward on completion) this should not be reason to disqualify the lift."
+        ],
+        "ruleReference": {
+          "section": "Powerlifts and Rules of Performance",
+          "subsection": "Deadlift",
+          "ruleNumber": "4.3 (4), 4.3.1 (4)–(5)",
+          "pageNumber": 25
+        }
+      }
+    },
+    {
+      "id": 35,
+      "question": "How long does a lifter have to leave the platform after completing an attempt?",
+      "options": [
+        "10 seconds",
+        "30 seconds",
+        "One minute",
+        "There is no time limit"
+      ],
+      "correctAnswerIndex": 1,
+      "difficulty": "hard",
+      "ruleReference": {
+        "section": "Order of Competition",
+        "subsection": "Miscellaneous Rules",
+        "ruleNumber": "6.3 (8)",
+        "pageNumber": 35
+      },
+      "ruleQuote": "On the completion of an attempt, a lifter shall leave the platform within 30 seconds; failure to comply with this rule may result in disqualification of the attempt at the discretion of the referees.",
+      "status": "validated"
     }
   ]
 }

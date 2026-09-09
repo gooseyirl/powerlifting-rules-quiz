@@ -37,6 +37,16 @@ for q in questions:
     found = sorted(set.intersection(*[set(h) for h in hits])) if all(hits) else []
     ok = claimed in found
 
+    # an optional secondary citation is checked the same way
+    also = q.get("alsoSee")
+    if also:
+        aref = also["ruleReference"]["pageNumber"]
+        for aq in also["ruleQuotes"]:
+            afrags = [norm(f) for f in re.split(r"…|\.\.\.|\[[^\]]*\]", aq) if norm(f)]
+            if not all(f in pages.get(aref, "") for f in afrags):
+                bad += 1
+                print(f"Q{q['id']:<3} alsoSee p{aref:<3} FAIL  '{afrags[0][:50]}...'")
+
     if not ok:
         bad += 1
         missing = [fragments[n][:50] for n, h in enumerate(hits) if not h]
