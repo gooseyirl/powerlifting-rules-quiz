@@ -3,9 +3,11 @@
 
 Run from the repo root:  python3 scripts/verify-questions.py [questions.json]
 
-Quotes may elide text with an ellipsis (…); each fragment either side must be
-found verbatim on the cited page. Page footers print at the END of their page
-in pdftotext output, so never eyeball page numbers from a multi-page dump.
+Quotes may elide text with an ellipsis (…) and may carry editorial insertions
+in [square brackets] — a label added to a table row, or a corrected word. Both
+break the verbatim run, so the text between them must each be found on the
+cited page. Page footers print at the END of their page in pdftotext output, so
+never eyeball page numbers from a multi-page dump.
 """
 import json, re, subprocess, sys, unicodedata
 
@@ -27,7 +29,9 @@ bad = 0
 
 for q in questions:
     claimed = q["ruleReference"]["pageNumber"]
-    fragments = [norm(f) for f in re.split(r"…|\.\.\.", q["ruleQuote"]) if norm(f)]
+    # ellipses and [editorial insertions] both end a verbatim run
+    parts = re.split(r"…|\.\.\.|\[[^\]]*\]", q["ruleQuote"])
+    fragments = [norm(f) for f in parts if norm(f)]
     # a fragment must sit on one page; find pages holding ALL fragments
     hits = [sorted(p for p, t in pages.items() if f in t) for f in fragments]
     found = sorted(set.intersection(*[set(h) for h in hits])) if all(hits) else []
