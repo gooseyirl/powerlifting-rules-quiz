@@ -21,6 +21,7 @@
   /* Referee lights */
   --white-light:#FFFFFF;
   --red-light:#E03131;
+  --correct:#3ECF7A;
 
   /* IPF disc colour code — 15kg yellow, 20kg blue, 25kg red */
   --disc-15:#F2C200;
@@ -46,17 +47,12 @@ body{
   overflow-x:hidden;
 }
 
-/* Grain + vignette for depth */
+/* Fine grain for texture — uniform, no vignette */
 body::before{
   content:"";
   position:fixed;inset:0;pointer-events:none;z-index:100;
   opacity:.055;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-body::after{
-  content:"";
-  position:fixed;inset:0;pointer-events:none;z-index:99;
-  background:radial-gradient(120% 90% at 50% 0%,transparent 40%,rgba(0,0,0,.55) 100%);
 }
 
 .wrap{
@@ -227,12 +223,26 @@ button.chip-count:disabled{color:var(--mute);border-color:var(--line)}
   transition:color var(--fast) var(--ease);
 }
 
-/* Referee lights: white = good lift, red = no lift */
+/* Correct answer picked — green edge and a tick, rather than a white fill */
 .opt.good{
-  background:var(--white-light);border-color:var(--white-light);color:var(--ink);
+  background:rgba(62,207,122,.10);
+  border-color:var(--correct);
+  color:var(--paper);font-weight:500;
   animation:flash var(--mid) var(--ease);
 }
-.opt.good .num{color:var(--ink)}
+.opt.good .num{color:var(--correct)}
+
+/* Tick sits at the right-hand edge of whichever option is the correct one */
+.opt.good::after,.opt.reveal::after{
+  content:"\2713";
+  margin-left:auto;
+  flex:none;
+  color:var(--correct);
+  font-size:1.05rem;line-height:1.35;
+  animation:tickIn .3s var(--ease) backwards;
+  animation-delay:.08s;
+}
+@keyframes tickIn{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
 .opt.bad{
   background:var(--red-light);border-color:var(--red-light);color:#fff;
   animation:flash var(--mid) var(--ease);
@@ -488,6 +498,8 @@ function show(id) {
 /* ── Difficulty filters ───────────────────────── */
 // TIERS is ordered easiest first — an uneven split leans this way
 const TIERS = ['easy', 'medium', 'hard'];
+// Hard is off to begin with — a first-time visitor gets a gentler quiz
+const DEFAULT_TIERS = ['easy', 'medium'];
 const STORE = 'plq.tiers';
 const LEN   = 'plq.len';
 const STEPS = [10, 20, 30];
@@ -526,7 +538,7 @@ function cycleLength() {
   try { localStorage.setItem(LEN, String(want)); } catch (e) { /* ignore */ }
   paintCount();
 }
-let on = new Set(TIERS);
+let on = new Set(DEFAULT_TIERS);
 
 // Restore the visitor's last choice, ignoring anything unusable
 try {
